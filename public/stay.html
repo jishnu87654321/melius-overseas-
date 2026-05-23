@@ -191,7 +191,7 @@
 <!-- Shared Navbar -->
 <nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-[#001848]/60 backdrop-blur-xl border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
-<a class="font-headline-sm text-2xl font-bold text-on-background flex items-center gap-3 pl-4 md:pl-8" href="/">
+<a class="font-headline-sm text-2xl font-bold text-on-background flex items-center gap-2 lg:gap-3 lg:pl-6" href="/">
 <img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
 <span>Melius Overseas</span>
 </a>
@@ -205,11 +205,23 @@
                 Book Consultation
 </a>
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<button class="md:hidden text-on-surface p-2 relative z-50" id="mobile-menu-btn">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[45] bg-white/95 dark:bg-[#001848]/98 backdrop-blur-3xl transform translate-x-full transition-transform duration-300 flex flex-col pt-28 px-6 md:hidden">
+    <div class="flex flex-col gap-8 text-center">
+        <a class="font-headline-sm text-3xl font-bold text-on-background dark:text-white" href="/">Home</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300" href="/roadmap">Roadmap</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300" href="/universities">Universities</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300" href="/stay">Stay</a>
+        <a href="/register" class="mt-8 bg-tertiary text-on-tertiary py-4 rounded-full font-bold text-xl shadow-lg shadow-tertiary/20">Book Consultation</a>
+    </div>
+</div>
+
 
 <main class="pt-0">
 <!-- Premium Hero Section -->
