@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Melius Overseas - Universities</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#747676",
+                        "surface-dim": "#d9dadb",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed": "#001848",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#535f74",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d7e3fc",
+                        "inverse-primary": "#c6c6c7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#586378",
+                        "on-surface-variant": "#444748",
+                        "secondary-container": "#d4e0f9",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-high": "#e7e8e9",
+                        "primary": "#5d5f5f",
+                        "tertiary-fixed": "#dae2ff",
+                        "on-secondary-fixed": "#101c2e",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-tint": "#5d5f5f",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#186cfc",
+                        "on-secondary-fixed-variant": "#3c475b",
+                        "primary-container": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#b2c5ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747878",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#bbc7df",
+                        "outline-variant": "#c4c7c8",
+                        "tertiary": "#0056d2",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#0040a1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "max-width": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+
+<!-- Smooth Page Loader -->
+<style>
+  #smooth-loader {
+    position: fixed; inset: 0; z-index: 99999;
+    background-color: #f8f9fa;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+  }
+  #smooth-loader.hidden {
+    opacity: 0; visibility: hidden; pointer-events: none;
+  }
+  .loader-logo {
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 32px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .loading-bar-container {
+    width: 240px;
+    height: 4px;
+    background-color: rgba(0, 86, 210, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loading-bar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 40%;
+    background-color: #0056d2;
+    border-radius: 4px;
+    animation: loading-bar-anim 1.5s ease-in-out infinite;
+  }
+  @keyframes loading-bar-anim {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(350%); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+</style>
+<div id="smooth-loader">
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <div class="loading-bar-container">
+    <div class="loading-bar"></div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('smooth-loader');
+      if (loader) loader.classList.add('hidden');
+    }, 150);
+  });
+</script>
+<!-- End Smooth Page Loader -->
+
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-[#001848]/60 backdrop-blur-xl border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-3 pl-4 md:pl-8" href="/">
+<img src="/logo.png" alt="Melius Overseas Logo" class="h-10 object-contain" />
+<span>Melius Overseas</span>
+</a>
+<ul class="hidden md:flex space-x-8 items-center">
+<li><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/">Home</a></li>
+<li><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/roadmap">Roadmap</a></li>
+<li><a class="font-label-lg text-label-lg text-tertiary border-b-2 border-tertiary pb-1 font-bold" href="/universities">Universities</a></li>
+<li><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/stay">Stay</a></li>
+</ul>
+<a href="/register" class="hidden md:inline-flex bg-on-tertiary-fixed text-on-tertiary font-label-lg text-label-lg px-6 py-3 rounded uppercase tracking-wider hover:bg-tertiary transition-colors">
+                Book Consultation
+            </a>
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic shot of a grand university campus building with classic architecture, lush green lawns, and students walking. The lighting is golden hour, casting long soft shadows and a warm, aspirational glow. High-end editorial photography style." class="w-full h-full object-cover object-center filter brightness-75" data-alt="A grand, historic university campus building made of pale stone with classical architecture, surrounded by manicured green lawns and large oak trees. The scene is bathed in warm, golden-hour sunlight, creating a highly aspirational, premium academic atmosphere. Small silhouettes of students walking add scale. High-end, luxury editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3uISbdDP0__ferL1WA_8wSGsFoAFc810jBiwTTEmSSLjrZiuoz9FpzgB-l9tsTup7rNhy1nBxr3whsPytj58ytjCmMjeq4f38B86POZKBAFwBg-MSU78uGydULMnSIiOOYpAFcjQuVg8B4pc3AFdslRVn1m-TwzHVJ2tuk7LiAo3zIqA48bhWiEoN29VJpEd3Ww6k9lHksuiIDH7srHW8zfftc0LeyoBJmQVUlEZgb5t47-9VPSWM4b61T5T4DCXAzQeBE08Gm6sA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto mt-20">
+<h1 class="font-display-lg text-display-lg text-on-primary drop-shadow-lg mb-6">World-Class Universities.<br/><span class="text-secondary-fixed">Carefully Selected.</span></h1>
+<p class="font-body-lg text-body-lg text-surface-container-high max-w-2xl mx-auto drop-shadow-md">
+                    Explore our curated portfolio of premier global institutions. Each university is vetted for academic excellence, modern infrastructure, and international student support.
+                </p>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 py-4">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex space-x-8 overflow-x-auto hide-scrollbar">
+<button class="font-label-lg text-label-lg whitespace-nowrap text-tertiary border-b-2 border-tertiary pb-2 px-1">All Destinations</button>
+<button class="font-label-lg text-label-lg whitespace-nowrap text-on-surface-variant hover:text-tertiary transition-colors pb-2 px-1">Georgia</button>
+<button class="font-label-lg text-label-lg whitespace-nowrap text-on-surface-variant hover:text-tertiary transition-colors pb-2 px-1">Russia</button>
+<button class="font-label-lg text-label-lg whitespace-nowrap text-on-surface-variant hover:text-tertiary transition-colors pb-2 px-1">China</button>
+<button class="font-label-lg text-label-lg whitespace-nowrap text-on-surface-variant hover:text-tertiary transition-colors pb-2 px-1">Philippines</button>
+<button class="font-label-lg text-label-lg whitespace-nowrap text-on-surface-variant hover:text-tertiary transition-colors pb-2 px-1">Bangladesh</button>
+<button class="font-label-lg text-label-lg whitespace-nowrap text-on-surface-variant hover:text-tertiary transition-colors pb-2 px-1">Uzbekistan</button>
+</div>
+</div>
+</section>
+<!-- University Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+<!-- Card 1 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F1.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Georgian National University SEU" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Georgian National University SEU</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 2 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F2.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Alte University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Alte University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 3 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F3.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Caucasus University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Caucasus University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 4 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F4.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Caucasus International University (CIU)" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Caucasus International University (CIU)</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 5 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F5.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="International Black Sea University (IBSU)" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Black Sea University (IBSU)</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 6 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F6.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Peking University Health Science Center" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Peking University Health Science Center</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 7 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F7.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Shanghai Jiao Tong University School of Medicine" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Shanghai Jiao Tong University School of Medicine</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 8 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F8.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Tsinghua University School of Medicine" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tsinghua University School of Medicine</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 9 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F9.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="First Moscow State Medical University (Sechenov University)" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">First Moscow State Medical University (Sechenov University)</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 10 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F10.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Saint Petersburg State Medical University (Pavlov University)" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Saint Petersburg State Medical University (Pavlov University)</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 11 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F11.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Pirogov Russian National Research Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Pirogov Russian National Research Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 12 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F12.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="University of Santo Tomas Faculty of Medicine and Surgery" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">University of Santo Tomas Faculty of Medicine and Surgery</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 13 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F13.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="University of the Philippines Manila" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">University of the Philippines Manila</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 14 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F14.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Tashkent State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tashkent State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 15 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F15.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Samarkand State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Samarkand State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 16 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F16.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Andijan State Medical Institute" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Andijan State Medical Institute</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 17 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F17.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Bukhara State Medical Institute" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Bukhara State Medical Institute</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 18 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F18.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Urgench Branch of Tashkent Medical Academy" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Urgench Branch of Tashkent Medical Academy</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 19 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F19.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Tashkent Pediatric Medical Institute" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tashkent Pediatric Medical Institute</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 20 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F20.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Mari State University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Mari State University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 21 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F21.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Orel State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Orel State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 22 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F22.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Orenburg State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Orenburg State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 23 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F23.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Perm State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Perm State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 24 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F24.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Tver State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tver State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 25 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F25.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Altai State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Altai State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 26 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F26.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Bangladesh Medical College" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Bangladesh Medical College</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 27 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F27.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Dhaka National Medical College" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Dhaka National Medical College</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 28 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F28.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Holy Family Red Crescent Medical College" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Holy Family Red Crescent Medical College</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 29 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F29.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="International Medical College" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Medical College</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 30 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F30.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Delta Medical College" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Delta Medical College</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 31 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F31.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Jahurul Islam Medical College" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Jahurul Islam Medical College</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 32 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F32.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Asian Medical Institute" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Asian Medical Institute</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 33 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F33.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Kyrgyz-Russian Slavic University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Kyrgyz-Russian Slavic University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 34 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F34.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Jalalabad State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Jalalabad State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 35 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F35.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="International Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 36 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F36.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Osh State University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Osh State University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 37 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F37.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Kyrgyz State Medical Academy" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Kyrgyz State Medical Academy</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 38 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F38.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Yerevan State Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Yerevan State Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 39 -->
+<div class="lg:col-span-12 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F39.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Yerevan Haybusak Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Yerevan Haybusak Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 40 -->
+<div class="lg:col-span-7 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F40.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Mkhitar Gosh Armenian-Russian International University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Mkhitar Gosh Armenian-Russian International University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 41 -->
+<div class="lg:col-span-5 relative rounded-[24px] overflow-hidden group aspect-[4/5] sm:aspect-auto sm:h-[600px] w-full cursor-pointer hover:shadow-2xl transition-all duration-500 scroll-reveal opacity-0 translate-y-12">
+    <img loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F41.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj" alt="Hanoi Medical University" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+    
+    <div class="absolute top-6 right-6 bg-surface-variant/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-surface-lowest/10">
+       <span class="text-[#facc15] material-symbols-outlined text-sm">check_circle</span>
+       <span class="text-surface-lowest text-xs font-bold uppercase tracking-widest">NMC APPROVED</span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
+        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Hanoi Medical University</h3>
+
+        <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
+            <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
+                Explore Program <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed dark:bg-on-background w-full pt-16 pb-8 border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="md:col-span-1 mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md text-surface-lowest block mb-4">Melius Overseas</span>
+<p class="font-body-md text-body-md text-surface-variant/70">Elite Stewardship in Global Education.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="/roadmap">Roadmap</a>
+<a class="font-body-md text-body-md text-tertiary-fixed font-bold" href="/universities">Universities</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="/stay">Stay</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="#">Admissions</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mt-16 pt-8 border-t border-surface-variant/20">
+<p class="font-body-md text-body-md text-surface-variant/50 text-center md:text-left">
+                © 2024 Melius Overseas. Elite Stewardship in Global Education.
+            </p>
+</div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', 'translate-y-12');
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '50px 0px 0px 0px', threshold: 0.05 });
+  
+  document.querySelectorAll('.scroll-reveal').forEach((el, index) => {
+    el.classList.add('transition-all', 'duration-[800ms]', 'ease-out');
+    // Add a slight stagger delay based on index for the first few cards if needed
+    if(index < 6) el.style.transitionDelay = (index * 100) + 'ms';
+    observer.observe(el);
+  });
+});
+</script>
+
+</body></html>

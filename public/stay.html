@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Melius Overseas - Stay</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#d9dadb",
+                      "surface-container": "#edeeef",
+                      "on-tertiary-fixed": "#001848",
+                      "surface-variant": "#e1e3e4",
+                      "surface-bright": "#f8f9fa",
+                      "secondary": "#535f74",
+                      "on-background": "#191c1d",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#d7e3fc",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#586378",
+                      "on-surface-variant": "#444748",
+                      "secondary-container": "#d4e0f9",
+                      "inverse-surface": "#2e3132",
+                      "surface-container-high": "#e7e8e9",
+                      "primary": "#5d5f5f",
+                      "tertiary-fixed": "#dae2ff",
+                      "on-secondary-fixed": "#101c2e",
+                      "error-container": "#ffdad6",
+                      "background": "#f8f9fa",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-tint": "#5d5f5f",
+                      "on-tertiary-container": "#186cfc",
+                      "on-secondary-fixed-variant": "#3c475b",
+                      "primary-container": "#ffffff",
+                      "surface-container-low": "#f3f4f5",
+                      "primary-fixed": "#e2e2e2",
+                      "surface-container-highest": "#e1e3e4",
+                      "tertiary-fixed-dim": "#b2c5ff",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#ffffff",
+                      "on-surface": "#191c1d",
+                      "on-secondary": "#ffffff",
+                      "outline": "#747878",
+                      "surface": "#f8f9fa",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#bbc7df",
+                      "outline-variant": "#c4c7c8",
+                      "tertiary": "#0056d2",
+                      "on-primary-fixed": "#1a1c1c",
+                      "on-tertiary-fixed-variant": "#0040a1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "max-width": "1280px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "label-lg": ["DM Sans"],
+                      "body-md": ["DM Sans"],
+                      "headline-lg": ["Playfair Display"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "body-lg": ["DM Sans"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                      "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                      "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                      "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                      "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+              }
+            }
+        }
+    </script>
+<style>
+        .carousel-track {
+            display: flex;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Hide scrollbar for clean carousel */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        @keyframes loadingBar {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(300%); }
+        }
+        .animate-loading-bar {
+            animation: loadingBar 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+
+<!-- Smooth Page Loader -->
+<style>
+  #smooth-loader {
+    position: fixed; inset: 0; z-index: 99999;
+    background-color: #f8f9fa;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+  }
+  #smooth-loader.hidden {
+    opacity: 0; visibility: hidden; pointer-events: none;
+  }
+  .loader-logo {
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 32px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .loading-bar-container {
+    width: 240px;
+    height: 4px;
+    background-color: rgba(0, 86, 210, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loading-bar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 40%;
+    background-color: #0056d2;
+    border-radius: 4px;
+    animation: loading-bar-anim 1.5s ease-in-out infinite;
+  }
+  @keyframes loading-bar-anim {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(350%); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+</style>
+<div id="smooth-loader">
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <div class="loading-bar-container">
+    <div class="loading-bar"></div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('smooth-loader');
+      if (loader) loader.classList.add('hidden');
+    }, 150);
+  });
+</script>
+<!-- End Smooth Page Loader -->
+
+
+<!-- Shared Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-[#001848]/60 backdrop-blur-xl border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<a class="font-headline-sm text-2xl font-bold text-on-background flex items-center gap-3 pl-4 md:pl-8" href="/">
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
+<span>Melius Overseas</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/roadmap">Roadmap</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/universities">Universities</a>
+<a class="font-label-lg text-label-lg text-tertiary border-b-2 border-tertiary pb-1 font-bold" href="/stay">Stay</a>
+</div>
+<a href="/register" class="hidden md:flex items-center justify-center bg-on-secondary-fixed text-on-secondary hover:opacity-80 transition-opacity font-label-lg text-label-lg py-3 px-6 rounded hover:scale-95 transition-transform">
+                Book Consultation
+</a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<main class="pt-0">
+<!-- Premium Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 z-0">
+        <img alt="Modern, bright student apartment interior" class="w-full h-full object-cover transform scale-105 animate-[pulse_20s_ease-in-out_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR8dOeUqq2EFywB1bYXEyYWOhDMQ0UaYmPwwq-_wCRSTNBdL3zqaEyDUNGpQxGNFqL3s1xz2Ar54IoOAODNG4Uq_d27normnB4Tdnd8VUNNPvz6I_HqiqYvKFEbxDTDqwRIyeSW3BXCYmtb80swmdyUd35y_71DyxHZB5wZ6XQCWNV8pWRbuyHDaiR1aSU1m30bkUeqD8KgRTwTvXDFMSCmVGP7Kt-CEANSWugAvDlD6QbX85tkWa202dU7iZG79Z-tC71ylOMMMJo"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#001848]/90 via-[#001848]/70 to-[#001848]/20"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12">
+        <div class="md:col-span-8 lg:col-span-7">
+            <h1 class="font-display-lg text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 pb-2 text-white leading-tight">
+                Life Abroad, <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#b2c5ff] to-[#d7e3fc]">Taken Care Of.</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-white/80 mb-10 leading-relaxed text-lg max-w-2xl">
+                Transitioning to a new country should be seamless. We secure premium, safe, and conveniently located accommodations so you can focus entirely on your academic journey. Welcome to your new home.
+            </p>
+        </div>
+    </div>
+    <!-- Bottom fade -->
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+</section>
+<!-- Section 2: Full-width Horizontal Carousel -->
+<section class="py-24 bg-gradient-to-b from-background to-surface-container-low overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-16 text-center">
+<span class="text-tertiary font-label-lg text-label-lg uppercase tracking-widest mb-4 block">Premium Locations</span>
+<h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-extrabold pb-2 text-on-background">Global <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0056d2] to-[#00a2ff]">Residences</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6 max-w-2xl mx-auto">Curated living spaces situated near top-tier universities, ensuring safety, comfort, and a vibrant student community.</p>
+</div>
+<div class="relative w-full">
+<!-- Track -->
+<div class="carousel-track space-x-6 px-6" style="width: max-content;">
+<!-- Repeat items for infinite effect -->
+<!-- Item 1 -->
+<div class="w-[300px] md:w-[450px] shrink-0 group relative overflow-hidden rounded-xl">
+<img alt="A luxurious, modern student dormitory lounge in London." class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlLV5FRhe3F0SaoqS2C2GRjKT71kl9U7awSZdt78ZBI81rtZDw-vN-uQKtJp8pTy0aV3gauQFqb9liy-gfdptm7BGMh4lY8ruCKgysfuZn0CMOc6PjsF9k56DAhLVrS4tAnWFYtSb8VjYBNC6CWcmkqH2dxXG-AxU0YLvWvbA4A_K7LPgCXMtJ9krnWDwM9Thlf0VdnLiARasYH0p4go4aZS3MvE2dZIGBuXzKwm3ej0u3tpn8FwvzpBV8UGoUuwGsI34ilwIb_K5P"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">London, UK</h3>
+<p class="font-body-md text-body-md text-white/80">Premium Studio Apartments</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="w-[300px] md:w-[450px] shrink-0 group relative overflow-hidden rounded-xl">
+<img alt="A bright, sunlit university campus pathway in Boston." class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU64IYUgngmd-MTG7K1bISwUTR1i3SVYH2jdApAdeuVBTf4PpbZI_-53nqMTBFZjmU2Q3ybf7t41ajVrYivYu8grAC9yj-G0c6q_KhzCukV3RRkZVhlzKQcjJO23729tL_wGzZKVJ682goHFZH-zRV-opGpfF1Ncr0w-hh_6GtpM-6lKiws2yrjlgVtGto2_64NYUqO4cgCbv9AOGp-6BWtImg5xgogh4oygtEHgj-Ks9zXXdlTuWPG7AeNaJ4nTHVGbAJpGhbBKfZ"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">Boston, USA</h3>
+<p class="font-body-md text-body-md text-white/80">On-Campus Suites</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="w-[300px] md:w-[450px] shrink-0 group relative overflow-hidden rounded-xl">
+<img alt="An elegant, minimalist modern apartment interior in Melbourne." class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXr0ygNb60US2-QGd9qUXBFQ8yT07FekPJ0hVsTaem4VKzGIabVq27J9EAOJEcnvxJDbjMi6k71LBGtrN7rk8diWD4w4TAcHtBrPiqWwEPAiGP0V_16kTfbW1Bsw8dOMqqCZrBzEFrK6VP93Geozc18-1bndM3x1y71BxTqU8lJbVqtm2hEfUjRqNT53SHqchTgol5wSJljvPc93bUkuwnNQKaBmp7ldxbLS7klcT0tZ7IDs8iFGfkOQgfVsttEXdV3o-QjQhuTW63"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">Melbourne, AUS</h3>
+<p class="font-body-md text-body-md text-white/80">City Center Residences</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="w-[300px] md:w-[450px] shrink-0 group relative overflow-hidden rounded-xl">
+<img alt="A sophisticated, modern student study area." class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Su4_z3BxSNyS3pcxTtAnO87ZdApvnIvslHTpsIuEZQfXhkvipOTKolu2gHEX-h4ulc0vyHCr5dvQyVshsYlNQHW8sLZ_OqNttr7IutdsvcUROtQ5Uz4Hb1hO8Qz-iWBp4Ag2_U1btDjCvWPN3c_zJI9QkOrFqvd67zdU-h4TVnCUr27QDbgmJF_A9Pf6q332HW6oDk_lB_b5K8jIdA4IoJVV25EfPkBTQJG-cSSub3lIXlv5ubtdz_Cny83_wwxsLqLK0_6ssZvs"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">Toronto, CAN</h3>
+<p class="font-body-md text-body-md text-white/80">Collaborative Living</p>
+</div>
+</div>
+<!-- Duplicates for seamless loop -->
+<div class="w-[300px] md:w-[450px] shrink-0 group relative overflow-hidden rounded-xl">
+<img alt="A luxurious, modern student dormitory lounge in London." class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTgqx151j5GppOu2DouFWwSQyWOAK2_IMUTPf8rHYB8d5YoV8z14jzOw4L1edVlCdingGEfg33Nug18WrdrnNIL_1Z_BnXZJoJddHkz1smoXQakwXxM-R-TJ_h-7dEOp0YFozszCazapPUuFT2f80kqYQRItooIMadJax2q-JoUN4okWOvl5L1leHjqz4_e5j0S8-CVeycT2L6lEoDUMrDUTswCjepX0B9Y3aM36N_o4UCqO7afuSkzYLN1mfZusrJTPgHlj3TCvjG"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">London, UK</h3>
+<p class="font-body-md text-body-md text-white/80">Premium Studio Apartments</p>
+</div>
+</div>
+<div class="w-[300px] md:w-[450px] shrink-0 group relative overflow-hidden rounded-xl">
+<img alt="A bright, sunlit university campus pathway in Boston." class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD5cP6D4WJSSvjTWlqpvbNGJp9RZ4x98mrwj79iVH0RV7GzCG2ePSbF3OnJHcOKoP4S6cVVwRJiXV8NAymTGr7lVgts8jcVcGSuQKG0_23cuKIybdxbvli5fzJ9EchlQeoQ4J1n-Z5MHRNrkUAVTDre2W0X0RCq6hW2K0hzARXq4rt8F6AXD4noHhFKT4ih27rChjt6AaqYZuFFOqfogc9-KoqZtAOlya_cPJSWhkCkPXbRv80Ka9yOZA5cshFzp4KkGRzCNyK-JJ0"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">Boston, USA</h3>
+<p class="font-body-md text-body-md text-white/80">On-Campus Suites</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Parallax 'Filmstrip' Scroll -->
+<section class="py-24 bg-[#001848] text-white relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001848] via-[#002a7a]/50 to-[#001848] z-0"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+<div id="filmstrip-container" class="order-2 md:order-1 h-[600px] overflow-y-auto hide-scrollbar snap-y snap-mandatory rounded-2xl shadow-2xl border border-white/10 bg-white/5 backdrop-blur-sm relative">
+<!-- Filmstrip Images -->
+<div class="snap-center h-full w-full relative">
+<img alt="A diverse group of university students smiling and laughing together." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfwlS6A1WaVxzRFRoVbAejtJTywFrlvqxhwnHUPlfbujXByFcCn2fMwhRzyPQ87XcFVsOs5z5k8hmVzR5IcnGWu8dL2ahE8NIQh-tPJbJW6YA2sbiQhWaKZ92zU872Qz_Tc-SwY6h0SVLtNjTH0SfEsXzet5fe8dW3KEn4ZJLGUJhmwDIgtpKJI5voFid7E3Gw96Kir5uw8v50eLDWXGMop32NpM7_S6RzjzGF8b9K0XwlLjmpxgSRBq78k9hHXFlF931bDmqDbEXx"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="snap-center h-full w-full relative">
+<img alt="A high-end, minimalist cafe near a university campus." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY_yBptravjhyihAC8dkS0-M5MQayYRur5AwCWf3Lw8BzhMCZtBHXaB727UXaTV2PSNZgrOhADsZSrG9w4QCRNS_c5Pw5c1SYcEWOwOcWUio4jMnqyH5OHLm592yucOFJ0hbmB3_DigpGaMiUsy83dSsGbFXQlJbLwvZUPSsDEgpOyDUZCEdq34VOixq2b7OVJuk-kt07WmYIR7s571ZTgh1XYM9o_V-7gjW6ynvjZY4erk8oTQdYD8dANbAHf4BkapT80-S7Md0S"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="snap-center h-full w-full relative">
+<img alt="A beautiful, historic European city street scene at dusk." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYjPzXRvZwFHfwjuJ9chfsZDSli9B0QwhPjz_wYAK8scxngCzwiE4IIIP52JxwLj86LCs69Jp_GA3DiMuGNZQyCFZX5QYsvxh0Fo0FoAVHd1-e5b-nXaneOsAVI8RGgQxEA_AeZFHGMFp9_leJXbVSw53AgAdw9IqUiuIRwb8i9tQxsZGqySM4cnbVv7x0uKaoyyGGmx7yM-fGv9-eCrAMSyT0QLNHsgezRo1YOSJkJNT6j5KOrZiGsKXsBU-53JFCjSg69XJ8Zfg_"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="snap-center h-full w-full relative">
+<img alt="Modern university library with students studying." class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="snap-center h-full w-full relative">
+<img alt="Cozy student dorm room." class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-[#b2c5ff] font-label-lg text-label-lg uppercase tracking-widest mb-4 block">Student Life</span>
+<h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 pb-2 text-white">Immerse Yourself.</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-8">
+                        Studying abroad is more than academics; it's about the life you build outside the classroom. We ensure your environment fosters growth, cultural immersion, and lasting connections.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start bg-white/5 p-4 rounded-xl border border-white/5">
+<span class="material-symbols-outlined text-[#b2c5ff] mr-4 mt-1">explore</span>
+<span class="font-body-lg text-body-md text-white">Curated local guides for your new city.</span>
+</li>
+<li class="flex items-start bg-white/5 p-4 rounded-xl border border-white/5">
+<span class="material-symbols-outlined text-[#b2c5ff] mr-4 mt-1">groups</span>
+<span class="font-body-lg text-body-md text-white">Introductions to local student communities.</span>
+</li>
+<li class="flex items-start bg-white/5 p-4 rounded-xl border border-white/5">
+<span class="material-symbols-outlined text-[#b2c5ff] mr-4 mt-1">support_agent</span>
+<span class="font-body-lg text-body-md text-white">24/7 emergency support line.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('filmstrip-container');
+    if (!container) return;
+    
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    container.addEventListener('scroll', () => {
+        isUserScrolling = true;
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            isUserScrolling = false;
+        }, 2500);
+    });
+
+    setInterval(() => {
+      if (isUserScrolling) return;
+      
+      // Calculate max scroll (allowing for small rounding errors)
+      const maxScroll = container.scrollHeight - container.clientHeight - 10;
+      let nextScroll = container.scrollTop + container.clientHeight;
+      
+      if (container.scrollTop >= maxScroll) {
+        nextScroll = 0;
+      }
+      
+      container.scrollTo({
+        top: nextScroll,
+        behavior: 'smooth'
+      });
+    }, 2500);
+  });
+</script>
+<!-- Section 4: Info Cards Bento Grid -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-extrabold pb-2 text-on-background">Comprehensive <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0056d2] to-[#00a2ff]">Support</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-2xl mx-auto">Elite stewardship means handling every detail of your relocation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-[#f0f4ff] rounded-2xl p-8 border border-[#d7e3fc] hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#d7e3fc] rounded-bl-full -mr-8 -mt-8 opacity-60 group-hover:scale-125 transition-transform duration-500"></div>
+<span class="material-symbols-outlined text-tertiary text-5xl md:text-6xl mb-6 relative z-10 drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">apartment</span>
+<h3 class="font-headline-sm text-2xl md:text-3xl font-bold text-on-background mb-4 relative z-10">Accommodation Assistance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
+                            From securing private studios to arranging luxury dormitory placements, we negotiate terms and guarantee safe, premium living arrangements before you arrive.
+                        </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#f0f4ff] rounded-2xl p-8 border border-[#d7e3fc] hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#b2c5ff] rounded-bl-full -mr-8 -mt-8 opacity-40 group-hover:scale-125 transition-transform duration-500"></div>
+<span class="material-symbols-outlined text-tertiary text-5xl md:text-6xl mb-6 relative z-10 drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<h3 class="font-headline-sm text-2xl md:text-3xl font-bold text-on-background mb-4 relative z-10">Local Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
+                            Our dedicated on-ground concierge team assists with banking setup, mobile phone contracts, and healthcare registrations to ensure a smooth transition.
+                        </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-[#f0f4ff] rounded-2xl p-8 border border-[#d7e3fc] hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#d7e3fc] rounded-bl-full -mr-8 -mt-8 opacity-60 group-hover:scale-125 transition-transform duration-500"></div>
+<span class="material-symbols-outlined text-tertiary text-5xl md:text-6xl mb-6 relative z-10 drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">public</span>
+<h3 class="font-headline-sm text-2xl md:text-3xl font-bold text-on-background mb-4 relative z-10">Cultural Orientation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
+                            Bespoke orientation sessions covering local etiquette, transport navigation, and academic expectations, empowering you to thrive immediately.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Footer -->
+<footer class="bg-on-secondary-fixed dark:bg-on-background text-surface-container w-full pt-16 pb-8 border-t border-outline/20 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<a class="font-headline-sm text-2xl font-bold text-surface-lowest flex items-center gap-2 mb-4" href="/">
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
+</a>
+<p class="font-body-md text-body-md text-surface-variant/70">
+                    Elite Stewardship in Global Education.
+                </p>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="/roadmap">Roadmap</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="/universities">Universities</a>
+<a class="font-body-md text-body-md text-tertiary-fixed font-bold" href="/stay">Stay</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="/register">Admissions</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 md:col-span-3 mt-12 pt-8 border-t border-outline/20 text-center">
+<p class="font-body-md text-body-md text-surface-variant/50">
+                    © 2024 Melius Overseas. Elite Stewardship in Global Education.
+                </p>
+</div>
+</div>
+</footer>
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    if(mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('bg-surface');
+            nav.classList.toggle('bg-surface/90');
+        });
+    }
+</script>
+</body>
+</html>

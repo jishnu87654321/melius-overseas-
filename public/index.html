@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Melius Overseas - Your Medical Future Starts Here</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#747676",
+                        "surface-dim": "#d9dadb",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed": "#001848",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#535f74",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d7e3fc",
+                        "inverse-primary": "#c6c6c7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#586378",
+                        "on-surface-variant": "#444748",
+                        "secondary-container": "#d4e0f9",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-high": "#e7e8e9",
+                        "primary": "#5d5f5f",
+                        "tertiary-fixed": "#dae2ff",
+                        "on-secondary-fixed": "#101c2e",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-tint": "#5d5f5f",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#186cfc",
+                        "on-secondary-fixed-variant": "#3c475b",
+                        "primary-container": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#b2c5ff",
+                        "on-primary": "#ffffff",
+                        "surface-lowest": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747878",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#bbc7df",
+                        "outline-variant": "#c4c7c8",
+                        "tertiary": "#0056d2",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#0040a1"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "max-width": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    },
+                    animation: {
+                        'marquee': 'marquee 30s linear infinite',
+                        'marquee-reverse': 'marquee-reverse 30s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        'marquee-reverse': {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(0%)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary/20 selection:text-tertiary">
+
+<!-- Smooth Page Loader -->
+<style>
+  #smooth-loader {
+    position: fixed; inset: 0; z-index: 99999;
+    background-color: #f8f9fa;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+  }
+  #smooth-loader.hidden {
+    opacity: 0; visibility: hidden; pointer-events: none;
+  }
+  .loader-logo {
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 32px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .loading-bar-container {
+    width: 240px;
+    height: 4px;
+    background-color: rgba(0, 86, 210, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loading-bar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 40%;
+    background-color: #0056d2;
+    border-radius: 4px;
+    animation: loading-bar-anim 1.5s ease-in-out infinite;
+  }
+  @keyframes loading-bar-anim {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(350%); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+</style>
+<div id="smooth-loader">
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <div class="loading-bar-container">
+    <div class="loading-bar"></div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('smooth-loader');
+      if (loader) loader.classList.add('hidden');
+    }, 150);
+  });
+</script>
+<!-- End Smooth Page Loader -->
+
+
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-[#001848]/60 backdrop-blur-xl border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-3 pl-4 md:pl-8" href="/">
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
+<span>Melius Overseas</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-tertiary border-b-2 border-tertiary pb-1 font-bold" href="/">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/roadmap">Roadmap</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/universities">Universities</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="/stay">Stay</a>
+</div>
+<a href="/register" class="hidden md:flex items-center justify-center bg-on-secondary-fixed text-on-secondary hover:opacity-80 transition-opacity font-label-lg text-label-lg py-3 px-6 rounded hover:scale-95 transition-transform">
+                Book Consultation
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Majestic historic university building with red brick and green domes" class="w-full h-full object-cover" src="/hero_bg.png"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/90 via-on-background/70 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-8 flex flex-col gap-6">
+<h1 class="font-display-lg text-5xl md:text-7xl lg:text-[80px] text-surface-lowest leading-tight">
+                    Your Medical Future <br/><span class="text-tertiary-fixed-dim italic">Starts Here</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mt-4">
+                    The definitive bridge between local ambition and global medical education. We meticulously guide high-achieving students to top-tier European institutions with a 100% placement success rate.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<a href="/register" class="bg-tertiary text-on-tertiary px-8 py-4 rounded font-label-lg text-label-lg hover:bg-tertiary/90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-tertiary/20 flex items-center justify-center gap-2">
+                        Start Your Journey
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a href="#process-scroll" onclick="document.getElementById('process-scroll').scrollIntoView({behavior: 'smooth'}); return false;" class="border border-surface-lowest text-surface-lowest px-8 py-4 rounded font-label-lg text-label-lg hover:bg-surface-lowest hover:text-on-background transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+                        Watch Our Story
+                    </a>
+</div>
+</div>
+</div>
+</header>
+
+<!-- Infinite Logo Marquee -->
+<section class="py-16 bg-secondary-fixed overflow-hidden relative">
+<!-- Top shadow for depth -->
+<div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-black/5 to-transparent z-10"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-8 text-center">
+<p class="font-label-lg text-label-lg text-on-secondary-fixed uppercase tracking-widest">Trusted by Premier Institutions Across Europe</p>
+</div>
+<!-- Marquee Row 1 -->
+<div class="flex whitespace-nowrap overflow-hidden mb-8 group">
+<div class="flex items-center gap-16 animate-marquee shrink-0 pr-16">
+<!-- Repeat set 1 -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF SZEGED</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">SEMMELWEIS UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">CHARLES UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">PALACKY UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">RIGA STRADINS</div>
+<!-- Duplicate for seamless loop -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF SZEGED</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">SEMMELWEIS UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">CHARLES UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">PALACKY UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">RIGA STRADINS</div>
+</div>
+<div class="flex items-center gap-16 animate-marquee shrink-0 pr-16" aria-hidden="true">
+<!-- Repeat set 1 -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF SZEGED</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">SEMMELWEIS UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">CHARLES UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">PALACKY UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">RIGA STRADINS</div>
+<!-- Duplicate for seamless loop -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF SZEGED</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">SEMMELWEIS UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">CHARLES UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">PALACKY UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">RIGA STRADINS</div>
+</div>
+</div>
+<!-- Marquee Row 2 (Reverse) -->
+<div class="flex whitespace-nowrap overflow-hidden group">
+<div class="flex items-center gap-16 animate-marquee-reverse shrink-0 pr-16" style="animation-duration: 35s;">
+<!-- Repeat set 2 -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MEDICAL UNIVERSITY WARSAW</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">JAGIELLONIAN UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF PECS</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MASARYK UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">HUMANITAS UNIVERSITY</div>
+<!-- Duplicate for seamless loop -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MEDICAL UNIVERSITY WARSAW</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">JAGIELLONIAN UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF PECS</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MASARYK UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">HUMANITAS UNIVERSITY</div>
+</div>
+<div class="flex items-center gap-16 animate-marquee-reverse shrink-0 pr-16" aria-hidden="true" style="animation-duration: 35s;">
+<!-- Repeat set 2 -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MEDICAL UNIVERSITY WARSAW</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">JAGIELLONIAN UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF PECS</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MASARYK UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">HUMANITAS UNIVERSITY</div>
+<!-- Duplicate for seamless loop -->
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MEDICAL UNIVERSITY WARSAW</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">JAGIELLONIAN UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">UNIVERSITY OF PECS</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">MASARYK UNIVERSITY</div>
+<div class="text-on-secondary-fixed/60 font-headline-md font-bold hover:text-on-secondary-fixed transition-colors">HUMANITAS UNIVERSITY</div>
+</div>
+</div>
+<!-- Bottom shadow for depth -->
+<div class="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-black/5 to-transparent z-10"></div>
+</section>
+<!-- Admission Letter Scroll Sequence Animation Container -->
+<section id="process-scroll" class="py-24 bg-surface-lowest">
+    <!-- Header Layout -->
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16 relative z-10">
+        <span class="text-tertiary font-label-lg text-label-lg uppercase tracking-widest mb-4 block">The Destination</span>
+        <h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">From Application to Acceptance</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Experience the thrill of receiving your official admission letter. From application straight through to your offer letter, we keep you informed at every step so you can focus on your move, not paperwork.</p>
+    </div>
+
+    <!-- Scrollytelling Container -->
+    <div class="h-[300vh] relative" id="scroll-sequence-container">
+        <!-- Sticky Wrapper -->
+        <div class="sticky top-0 h-screen flex flex-col items-center justify-center px-4">
+            <!-- Centered Card -->
+            <div class="bg-surface-lowest border border-outline-variant/30 shadow-sm rounded-2xl w-full max-w-[1000px] h-[80vh] min-h-[500px] relative overflow-hidden flex items-center justify-center">
+                <!-- Canvas for Image Sequence -->
+                <canvas id="sequence-canvas" class="w-full h-full object-cover"></canvas>
+                
+                <!-- Badge -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 text-tertiary font-label-lg bg-surface-lowest/80 backdrop-blur px-4 py-2 rounded-full border border-outline-variant/20 animate-pulse">
+                    <span class="material-symbols-outlined text-sm">touch_app</span>
+                    <span>Scroll to Reveal Process</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('sequence-canvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    
+    // Using a 16:9 internal resolution as typical for standard video frames
+    canvas.width = 1920;
+    canvas.height = 1080;
+
+    const frameCount = 300;
+    const currentFrame = index => `/frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
+
+    const images = [];
+    
+    // Preload all 300 frames
+    for (let i = 1; i <= frameCount; i++) {
+        const img = new Image();
+        img.src = currentFrame(i);
+        images.push(img);
+    }
+
+    // Function to draw an image centered and scaled
+    const drawImage = (img) => {
+        if (!img || !img.naturalWidth) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Scale to "cover" the canvas area and zoom in to crop baked-in white borders
+        const CROP_SCALE = 1.4;
+        const scale = Math.max(canvas.width / img.naturalWidth, canvas.height / img.naturalHeight) * CROP_SCALE;
+        const drawWidth = img.naturalWidth * scale;
+        const drawHeight = img.naturalHeight * scale;
+        
+        const x = (canvas.width - drawWidth) / 2;
+        const y = (canvas.height - drawHeight) / 2;
+        
+        ctx.drawImage(img, x, y, drawWidth, drawHeight);
+    };
+
+    // Draw first frame when it's fully loaded to prevent blank screen
+    images[0].onload = () => {
+        canvas.width = images[0].naturalWidth || 1920;
+        canvas.height = images[0].naturalHeight || 1080;
+        drawImage(images[0]);
+    };
+
+    const container = document.getElementById('scroll-sequence-container');
+
+    window.addEventListener('scroll', () => {
+        const rect = container.getBoundingClientRect();
+        
+        // Calculate progress based on container top relative to viewport
+        // Progress starts when container top hits viewport top (rect.top = 0)
+        // Progress ends when container bottom hits viewport bottom (rect.bottom = window.innerHeight)
+        const scrollRange = rect.height - window.innerHeight;
+        let progress = -rect.top / scrollRange;
+        
+        if (progress < 0) progress = 0;
+        if (progress > 1) progress = 1;
+
+        // Calculate frame index (0-based array index, so 0 to 299)
+        const frameIndex = Math.min(
+            frameCount - 1,
+            Math.floor(progress * frameCount)
+        );
+
+        requestAnimationFrame(() => {
+            if (images[frameIndex] && images[frameIndex].complete) {
+                drawImage(images[frameIndex]);
+            }
+        });
+    });
+});
+</script>
+<!-- About Melius Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- Image Side -->
+<div class="lg:col-span-5 relative group">
+<div class="absolute inset-0 bg-tertiary-fixed rounded-2xl -rotate-3 transition-transform group-hover:rotate-0 duration-500 origin-bottom-left"></div>
+<img alt="Editorial portrait of a confident, diverse group of medical students in white coats, smiling and studying together in a modern, bright university library. The lighting is crisp and natural, highlighting their professionalism and ambition. Minimalist luxury aesthetic with clean lines and soft shadows." class="relative z-10 rounded-2xl shadow-xl w-full h-[600px] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Editorial portrait of a confident, diverse group of medical students in white coats, smiling and studying together in a modern, bright university library. The lighting is crisp and natural, highlighting their professionalism and ambition. Minimalist luxury aesthetic with clean lines and soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb17Tl5jFfsBvC9ziw-X2o2rxQFkOMfC8m5TKr-i7vnvWshbvuUfUvBt_pI4gqzblkMA_J5cn2KHAXNJf82ammU2bOGDuRne5iHNn5wUgfLGaOerGTdja8LSBHVAPVIXs3HwYHHJNeXOnkMkbJ7uJX_xSbCgwbwfJ7oJg9eD4u5A3M3u-cXE6dci5ON1mCd6whp-JA2FDh-tf2I0KkYXjp_5jTUxFp4JCQCcD82xsaFe8kZajBO6dHeS9LrDNtKoW4Qrsd7tD_bpYi"/>
+</div>
+<!-- Text Side -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<div>
+<span class="text-tertiary font-label-lg text-label-lg uppercase tracking-widest mb-4 block">The Melius Standard</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-background leading-tight">We Don't Just Guide.<br/><span class="text-on-surface-variant italic font-light">We Place.</span></h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Melius Overseas represents a new paradigm in educational consultancy. We bypass the generic agency model to offer bespoke, end-to-end stewardship for aspiring medical professionals. From curating the perfect university shortlist to securing your visa and arranging premium accommodation, every detail is managed with precision.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 border-t border-outline-variant/30 pt-8">
+<div>
+<div class="font-sans text-5xl md:text-6xl text-tertiary font-bold tracking-tight mb-2">500+</div>
+<div class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Students Placed</div>
+</div>
+<div>
+<div class="font-sans text-5xl md:text-6xl text-tertiary font-bold tracking-tight mb-2">15+</div>
+<div class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Partner Universities</div>
+</div>
+<div>
+<div class="font-sans text-5xl md:text-6xl text-tertiary font-bold tracking-tight mb-2">24/7</div>
+<div class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">On-Ground Support</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Roadmap Teaser Section (Horizontal Layout) -->
+<section class="py-24 bg-surface-container-low border-b border-surface-variant/30">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-tertiary font-label-lg text-label-lg uppercase tracking-widest mb-4 block">The Process</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Your Path to Europe</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">A transparent, step-by-step methodology designed to eliminate anxiety and ensure success.</p>
+</div>
+<div class="relative">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-0.5 bg-outline-variant/30 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[90px] h-[90px] rounded-2xl bg-surface-lowest border-2 border-tertiary flex items-center justify-center mb-6 shadow-sm group-hover:-translate-y-2 transition-transform duration-300 mx-auto">
+<span class="font-display-lg text-4xl font-bold text-tertiary">01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background font-bold mb-3 font-display-lg">Profile Evaluation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We assess your academic credentials against our partner universities' specific requirements to guarantee eligibility.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[90px] h-[90px] rounded-2xl bg-surface-lowest border-2 border-tertiary flex items-center justify-center mb-6 shadow-sm group-hover:-translate-y-2 transition-transform duration-300 mx-auto">
+<span class="font-display-lg text-4xl font-bold text-tertiary">02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background font-bold mb-3 font-display-lg">Application &amp; Strategy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Compilation of documents, notarization, and strategic submission to maximize acceptance speed.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[90px] h-[90px] rounded-2xl bg-surface-lowest border-[1.5px] border-outline-variant flex items-center justify-center mb-6 shadow-sm group-hover:-translate-y-2 transition-transform duration-300 mx-auto">
+<span class="font-display-lg text-4xl font-bold text-outline">03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background font-bold mb-3 font-display-lg">Departure &amp; Stay</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Visa securement, travel arrangements, and settling you into pre-vetted premium student accommodation.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="bg-surface-lowest text-on-background border border-outline/30 px-8 py-3 rounded font-label-lg text-label-lg hover:border-tertiary hover:text-tertiary transition-all shadow-sm">
+                    View Detailed Roadmap
+                </button>
+</div>
+</div>
+</section>
+<!-- Testimonials Marquee Section -->
+<section class="py-24 bg-surface-lowest relative overflow-hidden">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-12 text-center">
+<span class="text-tertiary font-label-lg text-label-lg uppercase tracking-widest mb-4 block">Success Stories</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-background leading-tight">Hear From Our Scholars</h2>
+</div>
+
+<style>
+@keyframes marqueeScroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+.animate-marquee-scroll {
+    animation: marqueeScroll 35s linear infinite;
+}
+.animate-marquee-scroll-reverse {
+    animation: marqueeScroll 35s linear infinite reverse;
+}
+</style>
+
+<div class="relative w-full mx-auto max-w-6xl overflow-hidden isolation-isolate flex flex-col gap-6">
+    <!-- Fading Edges -->
+    <div class="pointer-events-none absolute left-0 top-0 h-full w-24 md:w-32 z-10 bg-gradient-to-r from-surface-lowest to-transparent"></div>
+    
+    <!-- Row 1 -->
+    <div class="flex transform-gpu w-[200%] md:w-[150%] animate-marquee-scroll pt-5 pb-5">
+        <!-- Original Set -->
+        <div class="flex items-center">
+            <!-- Card 1 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop" alt="Rahul Sharma" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Rahul Sharma</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@rahul_med</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Melius made my dream of studying medicine in Europe a reality. The process was incredibly smooth from start to finish."</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop" alt="Priya Patel" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Priya Patel</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@priyapatel_dr</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"I was overwhelmed with the paperwork, but their team handled my visa and accommodation seamlessly."</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Rohan Mehta" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Rohan Mehta</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@rohanmehta99</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Thanks to their pre-vetted premium housing, my transition to studying at Charles University was stress-free!"</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop" alt="Anjali Desai" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Anjali Desai</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@anjali_abroad</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"The post-arrival support is real. When I had issues with my residency permit, they sorted it within 24 hours."</p>
+            </div>
+        </div>
+        <!-- Duplicated Set for infinite loop -->
+        <div class="flex items-center" aria-hidden="true">
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop" alt="Rahul Sharma" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Rahul Sharma</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@rahul_med</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Melius made my dream of studying medicine in Europe a reality. The process was incredibly smooth from start to finish."</p>
+            </div>
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop" alt="Priya Patel" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Priya Patel</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@priyapatel_dr</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"I was overwhelmed with the paperwork, but their team handled my visa and accommodation seamlessly."</p>
+            </div>
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Rohan Mehta" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Rohan Mehta</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@rohanmehta99</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Thanks to their pre-vetted premium housing, my transition to studying at Charles University was stress-free!"</p>
+            </div>
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop" alt="Anjali Desai" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Anjali Desai</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@anjali_abroad</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"The post-arrival support is real. When I had issues with my residency permit, they sorted it within 24 hours."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2 (Reverse) -->
+    <div class="flex transform-gpu w-[200%] md:w-[150%] animate-marquee-scroll-reverse pt-5 pb-5">
+        <!-- Original Set -->
+        <div class="flex items-center">
+            <!-- Card 5 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Vikram Singh" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Vikram Singh</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@vikram_singh</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Flawless visa process. What seemed terrifying was handled with absolute professionalism and extreme care."</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop" alt="Sneha Gupta" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Sneha Gupta</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@sneha_g_med</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Their evaluation process is top-notch. They perfectly matched my profile to University of Szeged."</p>
+            </div>
+            <!-- Card 7 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Kavya Iyer" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Kavya Iyer</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@kavya_iyer98</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"I can't thank Melius enough! From university selection to on-ground support, they were always there."</p>
+            </div>
+            <!-- Card 8 -->
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&h=200&fit=crop" alt="Arjun Nair" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Arjun Nair</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@arjun_dr</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"An incredible bespoke service. They don't just guide you; they truly place you where you belong."</p>
+            </div>
+        </div>
+        <!-- Duplicated Set -->
+        <div class="flex items-center" aria-hidden="true">
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Vikram Singh" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Vikram Singh</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@vikram_singh</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Flawless visa process. What seemed terrifying was handled with absolute professionalism and extreme care."</p>
+            </div>
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop" alt="Sneha Gupta" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Sneha Gupta</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@sneha_g_med</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"Their evaluation process is top-notch. They perfectly matched my profile to University of Szeged."</p>
+            </div>
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Kavya Iyer" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Kavya Iyer</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@kavya_iyer98</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"I can't thank Melius enough! From university selection to on-ground support, they were always there."</p>
+            </div>
+            <div class="p-6 rounded-xl mx-4 shadow-sm hover:shadow-md transition-all duration-200 w-80 shrink-0 bg-surface-container-low border border-outline-variant/30 flex flex-col h-[200px]">
+                <div class="flex gap-3 mb-4">
+                    <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&h=200&fit=crop" alt="Arjun Nair" />
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-1">
+                            <p class="font-headline-sm text-sm font-bold text-on-surface">Arjun Nair</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="inline-block"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg>
+                        </div>
+                        <span class="text-xs text-on-surface-variant">@arjun_dr</span>
+                    </div>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant italic">"An incredible bespoke service. They don't just guide you; they truly place you where you belong."</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pointer-events-none absolute right-0 top-0 h-full w-24 md:w-32 z-10 bg-gradient-to-l from-surface-lowest to-transparent"></div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="py-20 bg-tertiary relative overflow-hidden">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10 flex flex-col items-center">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-tertiary font-bold mb-6">Ready to Begin Your Journey?</h2>
+<p class="font-body-lg text-body-lg text-tertiary-fixed mb-10 max-w-2xl">
+                Schedule a complimentary profile evaluation with our senior educational stewards and map out your medical future today.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<a href="/register" class="bg-on-tertiary text-tertiary px-8 py-4 rounded font-label-lg text-label-lg hover:bg-surface-lowest transition-all hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-2 inline-flex">
+                    Book Free Consultation
+                    <span class="material-symbols-outlined text-sm">calendar_month</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer Shared Component -->
+<footer class="bg-on-secondary-fixed dark:bg-on-background text-surface-container w-full pt-16 pb-8 border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<a class="font-headline-md text-headline-md text-surface-lowest flex items-center gap-2" href="#">
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain brightness-0 invert" />
+                </a>
+<p class="font-body-md text-sm text-surface-variant/70">
+                    Elite Stewardship in Global Education. Bridging ambition with world-class medical institutions across Europe.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4 md:ml-auto">
+<h4 class="font-label-lg text-label-lg text-tertiary-fixed font-bold uppercase tracking-wider mb-2">Navigation</h4>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-tertiary-fixed-dim transition-colors" href="/roadmap">Roadmap</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-tertiary-fixed-dim transition-colors" href="/universities">Universities</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-tertiary-fixed-dim transition-colors" href="/stay">Stay</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-tertiary-fixed-dim transition-colors" href="/roadmap">Admissions</a>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<h4 class="font-label-lg text-label-lg text-tertiary-fixed font-bold uppercase tracking-wider mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+</div>
+<!-- Copyright Row -->
+<div class="col-span-1 md:col-span-3 mt-12 pt-8 border-t border-outline/20 text-center">
+<p class="font-body-md text-sm text-surface-variant/50">
+                    © 2024 Melius Overseas. Elite Stewardship in Global Education.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Simple JS for Navbar scroll effect -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.replace('bg-surface/90', 'bg-surface/95');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.replace('bg-surface/95', 'bg-surface/90');
+                }
+            });
+        });
+    </script>
+</body></html>

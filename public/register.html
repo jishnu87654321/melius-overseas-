@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Melius Overseas - Contact &amp; Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#747676",
+                        "surface-dim": "#d9dadb",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed": "#001848",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#535f74",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d7e3fc",
+                        "inverse-primary": "#c6c6c7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#586378",
+                        "on-surface-variant": "#444748",
+                        "secondary-container": "#d4e0f9",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-high": "#e7e8e9",
+                        "primary": "#5d5f5f",
+                        "tertiary-fixed": "#dae2ff",
+                        "on-secondary-fixed": "#101c2e",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-tint": "#5d5f5f",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#186cfc",
+                        "on-secondary-fixed-variant": "#3c475b",
+                        "primary-container": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#b2c5ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747878",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#bbc7df",
+                        "outline-variant": "#c4c7c8",
+                        "tertiary": "#0056d2",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#0040a1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "max-width": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'DM Sans', sans-serif; background-color: #f8f9fa; color: #191c1d; }
+        h1, h2, h3, h4, h5, h6, .font-headline-lg, .font-display-lg, .font-headline-sm, .font-headline-md, .font-headline-lg-mobile { font-family: 'Playfair Display', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-pattern { background-image: radial-gradient(#d4e0f9 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+<!-- Smooth Page Loader -->
+<style>
+  #smooth-loader {
+    position: fixed; inset: 0; z-index: 99999;
+    background-color: #f8f9fa;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+  }
+  #smooth-loader.hidden {
+    opacity: 0; visibility: hidden; pointer-events: none;
+  }
+  .loader-logo {
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 32px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .loading-bar-container {
+    width: 240px;
+    height: 4px;
+    background-color: rgba(0, 86, 210, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loading-bar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 40%;
+    background-color: #0056d2;
+    border-radius: 4px;
+    animation: loading-bar-anim 1.5s ease-in-out infinite;
+  }
+  @keyframes loading-bar-anim {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(350%); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+</style>
+<div id="smooth-loader">
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <div class="loading-bar-container">
+    <div class="loading-bar"></div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('smooth-loader');
+      if (loader) loader.classList.add('hidden');
+    }, 150);
+  });
+</script>
+<!-- End Smooth Page Loader -->
+
+
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-on-background/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<a href="/" class="flex items-center gap-2"><img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
+<span>Melius Overseas</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200 hover:opacity-80" href="/">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200 hover:opacity-80" href="/roadmap">Roadmap</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200 hover:opacity-80" href="/universities">Universities</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-tertiary transition-colors duration-200 hover:opacity-80" href="/stay">Stay</a>
+</div>
+<a href="/register" class="hidden md:flex bg-on-tertiary-fixed text-on-tertiary font-label-lg text-label-lg px-6 py-3 rounded hover:bg-tertiary hover:opacity-90 transition-all duration-200 hover:shadow-md items-center gap-2">
+                Book Consultation
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-background p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-16">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-16 md:py-24 max-w-max-width mx-auto overflow-hidden">
+<div class="absolute inset-0 bg-pattern opacity-50 -z-10"></div>
+<!-- Abstract Shapes -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob -z-10"></div>
+<div class="absolute top-0 right-32 w-64 h-64 bg-tertiary-fixed-dim rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000 -z-10"></div>
+<div class="absolute -bottom-8 left-20 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000 -z-10"></div>
+<div class="text-center max-w-3xl mx-auto mb-16 relative z-10">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-fixed text-on-tertiary-fixed font-label-lg text-label-lg mb-6 tracking-widest uppercase">Take The Next Step</span>
+<h1 class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background mb-6 leading-tight">Begin Your Journey <span class="text-tertiary italic">Today</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Connect with our expert stewards to map your personalized path to global educational excellence.</p>
+</div>
+<!-- Bento Grid Layout for Contact Area -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10">
+<!-- Registration Form (Spans 7 cols on Desktop) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest rounded-[12px] border border-outline-variant/30 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 md:p-10 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary"></div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-2">Request Consultation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Please provide your details below. Our admissions team will review your profile and contact you shortly.</p>
+<form id="registerForm" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider" for="fullName">Full Name</label>
+<input class="w-full bg-surface-container-lowest border border-on-tertiary-fixed rounded p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all" id="fullName" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-on-tertiary-fixed rounded p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider" for="phone">Phone Number</label>
+<div class="flex">
+<select id="phonePrefix" class="bg-surface-container-lowest border border-r-0 border-on-tertiary-fixed rounded-l p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all w-24">
+<option>+91</option>
+<option>+1</option>
+<option>+44</option>
+</select>
+<input class="w-full bg-surface-container-lowest border border-on-tertiary-fixed rounded-r p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all" id="phone" placeholder="98765 43210" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider" for="neetScore">NEET Score (If applicable)</label>
+<input class="w-full bg-surface-container-lowest border border-on-tertiary-fixed rounded p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all" id="neetScore" placeholder="e.g. 520" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider" for="country">Preferred Country</label>
+<select class="w-full bg-surface-container-lowest border border-on-tertiary-fixed rounded p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all" id="country">
+<option disabled="" selected="" value="">Select a country</option>
+<option>Russia</option>
+<option>Georgia</option>
+<option>Kazakhstan</option>
+<option>Uzbekistan</option>
+<option>Undecided</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider mb-3">Service Interest</label>
+<div class="flex gap-4">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="text-tertiary focus:ring-tertiary border-outline" name="service" type="radio" value="mbbs"/>
+<span class="font-body-md text-on-surface group-hover:text-tertiary transition-colors">MBBS Abroad</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-tertiary focus:ring-tertiary border-outline" name="service" type="radio" value="dha"/>
+<span class="font-body-md text-on-surface group-hover:text-tertiary transition-colors">DHA Preparation</span>
+</label>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-[12px] text-on-secondary-fixed uppercase tracking-wider" for="message">Additional Message</label>
+<textarea class="w-full bg-surface-container-lowest border border-on-tertiary-fixed rounded p-3 font-body-md text-on-background focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-all resize-none" id="message" placeholder="Tell us about your academic goals..." rows="4"></textarea>
+</div>
+<button class="w-full bg-tertiary text-on-tertiary font-label-lg text-label-lg py-4 rounded hover:bg-on-tertiary-fixed transition-all duration-300 shadow-md flex justify-center items-center gap-2 group mt-4" type="submit">
+                                Book My Free Consultation
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Contact Info & Map (Spans 5 cols on Desktop) -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Contact Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest rounded-[12px] border border-outline-variant/30 p-6 flex flex-col items-start gap-4 hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-shadow">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">mail</span>
+</div>
+<div class="w-full">
+<h3 class="font-label-lg text-label-lg text-on-background mb-1">Email Us</h3>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-colors break-all" href="mailto:admissions@meliusoverseas.com">admissions@meliusoverseas.com</a>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-[12px] border border-outline-variant/30 p-6 flex flex-col items-start gap-4 hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-shadow">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">call</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-background mb-1">Call Us</h3>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="tel:+919876543210">+91 98765 43210</a>
+</div>
+</div>
+</div>
+<!-- Location Card with Map -->
+<div class="bg-surface-container-lowest rounded-[12px] border border-outline-variant/30 p-6 flex-grow flex flex-col">
+<div class="flex items-start gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-background mb-1">Corporate Headquarters</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">123, Global Education Park, Indiranagar, Bangalore, Karnataka 560038, India</p>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden border border-outline-variant/30 flex-grow min-h-[250px] relative bg-surface-dim">
+<!-- Using an image to represent the map as requested by styling guidelines for map embeds -->
+<img alt="Map view" class="w-full h-full object-cover absolute inset-0 opacity-80 mix-blend-luminosity" data-alt="A clean, minimalist high-contrast digital map interface centered on Bangalore, India. The map uses a light-mode color palette with soft grey roads, subtle white landmasses, and electric blue markers highlighting key locations. The style is modern, abstract, and heavily focused on UI clarity, resembling a premium navigation app designed for a luxury travel or corporate service platform." data-location="Bangalore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBGy8zwpTXMa0poNVFFQ8scHmPCeNTlgK6gOG-1Fqpcu_etpvh3zh71yPUo4JYCYLLFKBkX_Z--pdgw0_CphGyMobnA5_GsGkqxkr5T3U2yfhjlo3MrD_dzBC3D6IETMvpl1Feu2USebBvrm8tHG4fJAOMf9AEOQH89NtZV3FvDtmBPYyEWdovq-Sdj6ak9oKhp275XP8Ojf4gk1upQhzSbPHzKFs9tcmsFXF0upcCk7KEA_n5J5113LH7dYbMpsxbg00sXXgHtTs"/>
+<div class="absolute inset-0 bg-tertiary/10 mix-blend-color"></div>
+<!-- Marker Pin overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-8 h-8 bg-tertiary rounded-full shadow-lg flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined text-on-tertiary text-sm">business</span>
+</div>
+<div class="w-2 h-2 bg-on-tertiary-fixed rounded-full mt-1 opacity-50 blur-[1px]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed dark:bg-on-background w-full pt-16 pb-8 border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto mb-12">
+<div class="md:col-span-1">
+<a href="/" class="block mb-4"><img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain brightness-0 invert" /></a>
+<p class="font-body-md text-surface-container/70 mt-4 max-w-xs">Elite Stewardship in Global Education. Guiding ambition to realization.</p>
+</div>
+<div class="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h4 class="font-label-lg text-surface-lowest mb-4 tracking-wider uppercase">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="/roadmap">Roadmap</a></li>
+<li><a class="font-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="/universities">Universities</a></li>
+<li><a class="font-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="/stay">Stay</a></li>
+<li><a class="font-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="#">Admissions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-surface-lowest mb-4 tracking-wider uppercase">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-surface-variant/70 hover:text-surface-lowest hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-label-lg text-surface-lowest mb-4 tracking-wider uppercase">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center text-surface-variant/70 hover:bg-surface-variant/10 hover:text-surface-lowest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center text-surface-variant/70 hover:bg-surface-variant/10 hover:text-surface-lowest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto pt-8 border-t border-surface-variant/10">
+<p class="font-body-md text-surface-container/50 text-sm text-center md:text-left">© 2024 Melius Overseas. Elite Stewardship in Global Education.</p>
+</div>
+</footer>
+<!-- Simple decorative animation styles -->
+<style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+<script>
+// Custom Toast Notification System
+function showToast(message, type = 'success') {
+    const toastContainer = document.getElementById('toast-container') || (function() {
+        const div = document.createElement('div');
+        div.id = 'toast-container';
+        div.className = 'fixed bottom-8 right-8 z-[100] flex flex-col gap-3 pointer-events-none';
+        document.body.appendChild(div);
+        return div;
+    })();
+
+    const toast = document.createElement('div');
+    const isError = type === 'error';
+    const bgColor = isError ? 'bg-error-container text-on-error-container border-error/20' : 'bg-surface-container-lowest text-on-background border-outline-variant/30';
+    const icon = isError ? 'error' : 'check_circle';
+    const iconColor = isError ? 'text-error' : 'text-[#10b981]'; // Emerald green for success
+
+    toast.className = `flex items-center gap-3 px-5 py-4 rounded-xl shadow-xl border ${bgColor} transform translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pointer-events-auto`;
+    toast.innerHTML = `
+        <span class="material-symbols-outlined ${iconColor}">${icon}</span>
+        <span class="font-body-md font-medium">${message}</span>
+    `;
+
+    toastContainer.appendChild(toast);
+
+    // Animate in
+    requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-8', 'opacity-0');
+    });
+
+    // Remove after 4 seconds
+    setTimeout(() => {
+        toast.classList.add('translate-y-8', 'opacity-0');
+        setTimeout(() => toast.remove(), 500); // Wait for animation
+    }, 4000);
+}
+
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Submitting...';
+    btn.disabled = true;
+
+    const data = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phonePrefix: document.getElementById('phonePrefix').value,
+        phone: document.getElementById('phone').value,
+        neetScore: document.getElementById('neetScore').value,
+        country: document.getElementById('country').value,
+        service: document.querySelector('input[name="service"]:checked').value,
+        message: document.getElementById('message').value
+    };
+
+    try {
+        const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (result.success) {
+            showToast('Message sent. We will contact you soon.', 'success');
+            e.target.reset();
+        } else {
+            showToast(result.error || result.message || 'Registration failed. Please try again later.', 'error');
+        }
+    } catch (err) {
+        showToast('An error occurred. Please try again.', 'error');
+    } finally {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+    }
+});
+</script>
+</body></html>

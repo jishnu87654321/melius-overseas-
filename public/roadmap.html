@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Melius Overseas - Admission Roadmap</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d9dadb",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed": "#001848",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#535f74",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d7e3fc",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#586378",
+                        "on-surface-variant": "#444748",
+                        "secondary-container": "#d4e0f9",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-fixed": "#dae2ff",
+                        "on-secondary-fixed": "#101c2e",
+                        "background": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c8",
+                        "tertiary": "#0056d2",
+                    },
+                    fontFamily: {
+                        "label-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["DM Sans"]
+                    }
+                }
+            }
+        }
+</script>
+<style>
+    .step-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .step-item.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .step-node {
+        transition: all 0.5s ease;
+    }
+    @keyframes pulse-glow {
+        0% { box-shadow: 0 0 0 0 rgba(0, 86, 210, 0.4); }
+        70% { box-shadow: 0 0 0 15px rgba(0, 86, 210, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(0, 86, 210, 0); }
+    }
+    .active-node {
+        background-color: #0056d2 !important;
+        border-color: #ffffff !important;
+        animation: pulse-glow 2s infinite;
+    }
+    
+    @keyframes loadingBar {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(300%); }
+    }
+    .animate-loading-bar {
+        animation: loadingBar 1.5s ease-in-out infinite;
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary/20 selection:text-tertiary">
+
+<!-- Smooth Page Loader -->
+<style>
+  #smooth-loader {
+    position: fixed; inset: 0; z-index: 99999;
+    background-color: #f8f9fa;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+  }
+  #smooth-loader.hidden {
+    opacity: 0; visibility: hidden; pointer-events: none;
+  }
+  .loader-logo {
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 32px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .loading-bar-container {
+    width: 240px;
+    height: 4px;
+    background-color: rgba(0, 86, 210, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loading-bar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 40%;
+    background-color: #0056d2;
+    border-radius: 4px;
+    animation: loading-bar-anim 1.5s ease-in-out infinite;
+  }
+  @keyframes loading-bar-anim {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(350%); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+</style>
+<div id="smooth-loader">
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <div class="loading-bar-container">
+    <div class="loading-bar"></div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('smooth-loader');
+      if (loader) loader.classList.add('hidden');
+    }, 150);
+  });
+</script>
+<!-- End Smooth Page Loader -->
+
+
+<!-- Shared Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-[#001848]/60 backdrop-blur-xl border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-5 md:px-20 h-20 max-w-[1280px] mx-auto">
+<a class="font-headline-sm text-2xl font-bold text-on-background flex items-center gap-3 pl-4 md:pl-8" href="/">
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
+<span>Melius Overseas</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors" href="/">Home</a>
+<a class="font-label-lg text-sm font-bold text-tertiary border-b-2 border-tertiary pb-1" href="/roadmap">Roadmap</a>
+<a class="font-label-lg text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors" href="/universities">Universities</a>
+<a class="font-label-lg text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors" href="/stay">Stay</a>
+</div>
+<a href="/register" class="hidden md:flex items-center justify-center bg-on-background text-surface-lowest hover:bg-tertiary transition-colors font-label-lg text-sm py-3 px-6 rounded font-bold shadow-sm">
+    Book Consultation
+</a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="bg-on-secondary-fixed pt-32 pb-24 px-5 md:px-20 relative overflow-hidden text-center md:text-left flex flex-col items-center">
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <span class="inline-block px-4 py-1.5 rounded-full border border-tertiary text-tertiary font-label-lg text-xs tracking-widest uppercase mb-6 bg-tertiary/10">Timeline</span>
+        <h1 class="font-display-lg text-5xl md:text-6xl font-bold text-white mb-6">
+            Your Admission <span class="text-tertiary">Roadmap</span>
+        </h1>
+        <p class="font-body-lg text-surface-variant/80 max-w-2xl mx-auto">
+            A meticulous, step-by-step journey designed to transition you from ambitious aspirant to enrolled student at a world-class institution. Elite stewardship at every milestone.
+        </p>
+    </div>
+</section>
+
+<!-- Alternate Vertical Timeline Roadmap -->
+<section class="py-24 px-5 md:px-20 bg-background relative overflow-hidden">
+    <div class="max-w-5xl mx-auto relative">
+        
+        <!-- Center Timeline Line (Desktop: center, Mobile: left) -->
+        <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-outline-variant/40 md:-translate-x-1/2 z-0"></div>
+        <div class="absolute left-6 md:left-1/2 top-0 w-0.5 bg-tertiary md:-translate-x-1/2 z-0 transition-all duration-700 ease-out shadow-[0_0_8px_rgba(0,86,210,0.8)]" id="timeline-progress" style="height: 0%;"></div>
+
+        <!-- Milestone 1 (Left) -->
+        <div class="step-item relative flex flex-col md:flex-row items-start md:items-center justify-between w-full mb-16 md:mb-24 group">
+            <div class="w-full md:w-5/12 md:text-right pl-16 md:pl-0 md:pr-12">
+                <div class="bg-surface-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                    <span class="status-label font-label-lg text-tertiary font-bold tracking-widest uppercase text-xs mb-3 block">Phase 01 • Active</span>
+                    <h3 class="font-headline-md text-2xl font-bold text-on-background mb-3">Initial Consultation</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+                        We begin with a comprehensive profiling session. Understanding your academic background, career aspirations, and personal preferences is paramount. Our expert advisors synthesize this data to draft an initial strategic blueprint for your global education journey.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 flex justify-center items-center w-6 h-6 mt-8 md:mt-0 z-10">
+                <div class="step-node active-node w-5 h-5 bg-surface-dim ring-4 ring-background border-[3px] border-surface-lowest rounded-full transition-all duration-500"></div>
+            </div>
+            <div class="hidden md:block w-5/12"></div>
+        </div>
+
+        <!-- Milestone 2 (Right) -->
+        <div class="step-item relative flex flex-col md:flex-row-reverse items-start md:items-center justify-between w-full mb-16 md:mb-24 group">
+            <div class="w-full md:w-5/12 text-left pl-16 md:pl-12 md:pr-0">
+                <div class="bg-surface-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                    <span class="status-label font-label-lg text-outline font-bold tracking-widest uppercase text-xs mb-3 block">Phase 02</span>
+                    <h3 class="font-headline-md text-2xl font-bold text-on-background mb-3">University Selection & Strategy</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Leveraging our extensive network, we curate a bespoke list of institutions that align perfectly with your profile. This phase involves deep-dive research into program specifics, faculty, and campus culture, ensuring every application is highly targeted.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 flex justify-center items-center w-6 h-6 mt-8 md:mt-0 z-10">
+                <div class="step-node w-5 h-5 bg-surface-dim ring-4 ring-background border-[3px] border-surface-lowest rounded-full transition-all duration-500"></div>
+            </div>
+            <div class="hidden md:block w-5/12"></div>
+        </div>
+
+        <!-- Milestone 3 (Left) -->
+        <div class="step-item relative flex flex-col md:flex-row items-start md:items-center justify-between w-full mb-16 md:mb-24 group">
+            <div class="w-full md:w-5/12 md:text-right pl-16 md:pl-0 md:pr-12">
+                <div class="bg-surface-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                    <span class="status-label font-label-lg text-outline font-bold tracking-widest uppercase text-xs mb-3 block">Phase 03</span>
+                    <h3 class="font-headline-md text-2xl font-bold text-on-background mb-3">Application & Offer Letter</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Our editorial team assists in crafting compelling personal statements and structuring your dossier to elite standards. We manage the submission process meticulously, liaising directly with admissions offices to secure your conditional or unconditional offers.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 flex justify-center items-center w-6 h-6 mt-8 md:mt-0 z-10">
+                <div class="step-node w-5 h-5 bg-surface-dim ring-4 ring-background border-[3px] border-surface-lowest rounded-full transition-all duration-500"></div>
+            </div>
+            <div class="hidden md:block w-5/12"></div>
+        </div>
+
+        <!-- Milestone 4 (Right) -->
+        <div class="step-item relative flex flex-col md:flex-row-reverse items-start md:items-center justify-between w-full mb-16 md:mb-24 group">
+            <div class="w-full md:w-5/12 text-left pl-16 md:pl-12 md:pr-0">
+                <div class="bg-surface-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                    <span class="status-label font-label-lg text-outline font-bold tracking-widest uppercase text-xs mb-3 block">Phase 04</span>
+                    <h3 class="font-headline-md text-2xl font-bold text-on-background mb-3">Visa Processing</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Navigating immigration protocols requires precision. We provide step-by-step guidance on financial documentation, interview preparation, and forms submission, minimizing bureaucratic friction and ensuring a smooth visa acquisition.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 flex justify-center items-center w-6 h-6 mt-8 md:mt-0 z-10">
+                <div class="step-node w-5 h-5 bg-surface-dim ring-4 ring-background border-[3px] border-surface-lowest rounded-full transition-all duration-500"></div>
+            </div>
+            <div class="hidden md:block w-5/12"></div>
+        </div>
+
+        <!-- Milestone 5 (Left) -->
+        <div class="step-item relative flex flex-col md:flex-row items-start md:items-center justify-between w-full mb-16 md:mb-24 group">
+            <div class="w-full md:w-5/12 md:text-right pl-16 md:pl-0 md:pr-12">
+                <div class="bg-surface-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                    <span class="status-label font-label-lg text-outline font-bold tracking-widest uppercase text-xs mb-3 block">Phase 05</span>
+                    <h3 class="font-headline-md text-2xl font-bold text-on-background mb-3">Travel & Accommodation</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Beyond academia, we ensure your transition is seamless. From securing premium student housing via our 'Stay' network to arranging airport transfers and initial local orientation, we curate a soft landing in your new country.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 flex justify-center items-center w-6 h-6 mt-8 md:mt-0 z-10">
+                <div class="step-node w-5 h-5 bg-surface-dim ring-4 ring-background border-[3px] border-surface-lowest rounded-full transition-all duration-500"></div>
+            </div>
+            <div class="hidden md:block w-5/12"></div>
+        </div>
+
+        <!-- Milestone 6 (Right) -->
+        <div class="step-item relative flex flex-col md:flex-row-reverse items-start md:items-center justify-between w-full group pb-8">
+            <div class="w-full md:w-5/12 text-left pl-16 md:pl-12 md:pr-0">
+                <div class="bg-surface-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                    <span class="status-label font-label-lg text-outline font-bold tracking-widest uppercase text-xs mb-3 block">Phase 06</span>
+                    <h3 class="font-headline-md text-2xl font-bold text-on-background mb-3">Final Enrollment</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+                        The culmination of your roadmap. We assist with final university registration, module selection advice, and integration into the campus community. Your elite educational journey officially begins.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="absolute left-6 md:left-1/2 -translate-x-1/2 flex justify-center items-center w-6 h-6 mt-8 md:mt-0 z-10">
+                <div class="step-node w-5 h-5 bg-surface-dim ring-4 ring-background border-[3px] border-surface-lowest rounded-full transition-all duration-500"></div>
+            </div>
+            <div class="hidden md:block w-5/12"></div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- University Card Stack Section -->
+<section class="py-24 bg-surface-lowest relative overflow-hidden" id="card-stack-section">
+  <!-- Animated Grid Background -->
+  <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" class="text-on-background" />
+  </svg>
+
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center">
+    
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-extrabold pb-2 text-on-background">Elite <span class="text-tertiary">Institutions</span></h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-2xl mx-auto">Swipe through our curated selection of top-tier universities worldwide.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex items-center justify-between w-full max-w-4xl mb-8">
+      <div class="flex gap-4">
+        <button id="cs-reset" class="p-3 rounded-full bg-surface hover:bg-surface-dim border border-outline-variant/30 transition-colors shadow-sm" title="Reset">
+          <span class="material-symbols-outlined text-on-background">refresh</span>
+        </button>
+        <button id="cs-shuffle" class="p-3 rounded-full bg-surface hover:bg-surface-dim border border-outline-variant/30 transition-colors shadow-sm" title="Shuffle">
+          <span class="material-symbols-outlined text-on-background">shuffle</span>
+        </button>
+      </div>
+      <div class="flex gap-4">
+        <button id="cs-prev" class="p-4 rounded-full bg-surface hover:bg-surface-dim border border-outline-variant/30 transition-colors shadow-sm">
+          <span class="material-symbols-outlined text-on-background">chevron_left</span>
+        </button>
+        <button id="cs-next" class="p-4 rounded-full bg-surface hover:bg-surface-dim border border-outline-variant/30 transition-colors shadow-sm">
+          <span class="material-symbols-outlined text-on-background">chevron_right</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- The Stack -->
+    <div class="relative w-full max-w-sm aspect-[4/5] perspective-[1000px] mt-48">
+      <ul id="card-stack-ul" class="relative w-full h-full m-0 p-0 preserve-3d">
+        <!-- Cards generated by JS -->
+      </ul>
+    </div>
+
+    <div class="mt-12 flex gap-2" id="cs-indicators">
+      <!-- Indicators -->
+    </div>
+  </div>
+</section>
+
+<style>
+  .cs-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    border-radius: 16px;
+    border: 2px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: var(--md-sys-color-surface);
+    cursor: grab;
+  }
+  .cs-card.grabbing {
+    cursor: grabbing;
+    transition: none; /* remove transition during drag */
+  }
+  .cs-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const univs = [{"name":"Georgian National University SEU","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F1.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Alte University","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F2.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Caucasus University","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F3.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Caucasus International University (CIU)","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F4.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"International Black Sea University (IBSU)","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F5.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Peking University Health Science Center","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F6.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Shanghai Jiao Tong University School of Medicine","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F7.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Tsinghua University School of Medicine","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F8.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"First Moscow State Medical University (Sechenov University)","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F9.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"},{"name":"Saint Petersburg State Medical University (Pavlov University)","image":"https://melius-overseas.com/_next/image?url=%2Fassets%2Funiversities%2F10.jpeg&w=1200&q=75&dpl=dpl_3NVkVYcfjUWdkYm6h6NxB4mcxPYj"}];
+    
+    const ul = document.getElementById('card-stack-ul');
+    const indicators = document.getElementById('cs-indicators');
+    
+    let currentIndex = 0;
+    
+    // Initialize DOM nodes once
+    let cards = univs.map((u, originalIndex) => {
+      const li = document.createElement('li');
+      li.className = 'cs-card';
+      li.innerHTML = `
+        <img src="${u.image}" alt="${u.name}">
+        <div class="card-overlay absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent text-white transition-opacity duration-300">
+          <h3 class="font-bold text-xl mb-1">${u.name}</h3>
+        </div>
+      `;
+      ul.appendChild(li);
+
+      // Setup drag
+      let startY = 0;
+      let currentY = 0;
+      let isDragging = false;
+      
+      const onStart = (y) => {
+        // Only allow dragging if this is the front card
+        if (li.style.zIndex !== String(univs.length)) return;
+        isDragging = true;
+        startY = y;
+        li.classList.add('grabbing');
+        pauseAutoPlay();
+      };
+      
+      const onMove = (y) => {
+        if (!isDragging) return;
+        currentY = y - startY;
+        const rotateX = currentY * -0.05;
+        li.style.transform = `translateY(${currentY}px) rotateX(${rotateX}deg) scale(1.05)`;
+      };
+      
+      const onEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        li.classList.remove('grabbing');
+        
+        if (currentY < -100) { // Swiped up
+          moveToEnd();
+        } else if (currentY > 100) { // Swiped down
+          moveToStart();
+        } else {
+          // Snap back
+          li.style.transform = `translateY(0px) rotateX(0deg) scale(1)`;
+        }
+        resumeAutoPlay();
+      };
+
+      li.addEventListener('mousedown', e => onStart(e.clientY));
+      window.addEventListener('mousemove', e => onMove(e.clientY));
+      window.addEventListener('mouseup', onEnd);
+      
+      li.addEventListener('touchstart', e => onStart(e.touches[0].clientY), {passive: true});
+      window.addEventListener('touchmove', e => onMove(e.touches[0].clientY), {passive: true});
+      window.addEventListener('touchend', onEnd);
+
+      return { u, li, originalIndex };
+    });
+
+    function render() {
+      // Update indicators
+      indicators.innerHTML = '';
+      univs.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = `h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-tertiary w-8' : 'bg-outline-variant w-2'}`;
+        indicators.appendChild(dot);
+      });
+
+      // Update Cards
+      for (let i = cards.length - 1; i >= 0; i--) {
+        const item = cards[i];
+        const isFront = i === 0;
+        const li = item.li;
+        
+        li.style.zIndex = cards.length - i;
+        
+        const offset = 20; // px up per card
+        const scaleStep = 0.05;
+        const brightness = Math.max(0.4, 1 - i * 0.15);
+        
+        li.style.transformOrigin = "top center";
+        li.style.top = `-${i * offset}px`;
+        li.style.transform = `scale(${1 - i * scaleStep})`;
+        li.style.filter = `brightness(${brightness})`;
+        
+        if (isFront) {
+           li.style.boxShadow = '0 30px 60px rgba(0,0,0,0.6)';
+        } else {
+           li.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5)';
+        }
+
+        const overlay = li.querySelector('.card-overlay');
+        if (isFront) {
+          overlay.classList.remove('opacity-0');
+          overlay.classList.add('opacity-100');
+        } else {
+          overlay.classList.add('opacity-0');
+          overlay.classList.remove('opacity-100');
+        }
+      }
+    }
+
+    function moveToEnd() {
+      const first = cards.shift();
+      cards.push(first);
+      currentIndex = cards[0].originalIndex;
+      render();
+    }
+
+    function moveToStart() {
+      const last = cards.pop();
+      cards.unshift(last);
+      currentIndex = cards[0].originalIndex;
+      render();
+    }
+
+    // Auto-play logic
+    let autoPlayInterval;
+    function resumeAutoPlay() {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(moveToEnd, 4000);
+    }
+    function pauseAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    document.getElementById('cs-next').addEventListener('click', () => { moveToEnd(); resumeAutoPlay(); });
+    document.getElementById('cs-prev').addEventListener('click', () => { moveToStart(); resumeAutoPlay(); });
+    
+    document.getElementById('cs-shuffle').addEventListener('click', () => {
+      cards.sort(() => Math.random() - 0.5);
+      currentIndex = cards[0].originalIndex;
+      render();
+      resumeAutoPlay();
+    });
+
+    document.getElementById('cs-reset').addEventListener('click', () => {
+      cards.sort((a, b) => a.originalIndex - b.originalIndex);
+      currentIndex = 0;
+      render();
+      resumeAutoPlay();
+    });
+
+    render();
+    resumeAutoPlay(); // Start interval
+  });
+</script>
+
+</main>
+
+<!-- Shared Footer -->
+<footer class="bg-on-secondary-fixed dark:bg-on-background text-surface-container w-full pt-16 pb-8 border-t border-outline/20 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-5 md:px-20 max-w-[1280px] mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<a class="font-headline-sm text-2xl font-bold text-surface-lowest flex items-center gap-2 mb-4" href="/">
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain" />
+</a>
+<p class="font-body-md text-body-md text-surface-variant/70">
+                    Elite Stewardship in Global Education.
+                </p>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-tertiary-fixed font-bold" href="/roadmap">Roadmap</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="/universities">Universities</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="/stay">Stay</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="/register">Admissions</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-surface-lowest transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 md:col-span-3 mt-12 pt-8 border-t border-outline/20 text-center">
+<p class="font-body-md text-body-md text-surface-variant/50">
+                    © 2024 Melius Overseas. Elite Stewardship in Global Education.
+                </p>
+</div>
+</div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const steps = document.querySelectorAll('.step-item');
+        const progressBar = document.getElementById('timeline-progress');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -40% 0px',
+            threshold: 0
+        };
+        
+        let maxActiveIndex = 0;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const stepElement = entry.target;
+                const index = Array.from(steps).indexOf(stepElement);
+                
+                if (entry.isIntersecting) {
+                    stepElement.classList.add('is-visible');
+                    
+                    if (index >= maxActiveIndex) {
+                        maxActiveIndex = index;
+                        
+                        // Update Progress Line Height
+                        const stepHeight = 100 / (steps.length - 1);
+                        progressBar.style.height = (index * stepHeight) + '%';
+                        
+                        // Update nodes
+                        steps.forEach((step, i) => {
+                            const node = step.querySelector('.step-node');
+                            const label = step.querySelector('.status-label');
+                            
+                            if (i <= maxActiveIndex) {
+                                node.classList.add('active-node');
+                                node.classList.remove('bg-surface-dim');
+                                
+                                if (i === maxActiveIndex) {
+                                    label.textContent = `Phase 0${i+1} • Active`;
+                                    label.classList.add('text-tertiary');
+                                    label.classList.remove('text-outline', 'text-tertiary/70');
+                                } else {
+                                    label.textContent = `Phase 0${i+1} • Completed`;
+                                    label.classList.remove('text-tertiary', 'text-outline');
+                                    label.classList.add('text-tertiary/70');
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        steps.forEach(step => observer.observe(step));
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    if(mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('bg-surface');
+            nav.classList.toggle('bg-surface/90');
+        });
+    }
+</script>
+</body>
+</html>
