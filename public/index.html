@@ -204,24 +204,21 @@
             height: auto !important;
         }
 
-        /* Issue 2: Scroll section min-height */
-        #process-scroll {
-            min-height: 100svh;
-        }
-        /* Issue 2: Canvas wrapper uses aspect-ratio, no fixed height */
+        /* Issue 2: Scroll section — no min-height override, py-24 is enough */
+        /* #process-scroll intentionally NOT given min-height to avoid blank gap */
+
+        /* Issue 2: Canvas wrapper — aspect-ratio 16:9, capped to 80vh so it fits viewport */
         .canvas-wrapper {
             aspect-ratio: 16 / 9;
-            height: auto !important;
-            min-height: 0;
-            overflow: visible;
             width: 100%;
             max-width: 1000px;
+            max-height: 80vh;  /* prevent overflow on short screens */
             position: relative;
+            overflow: hidden;  /* required for border-radius to clip canvas */
         }
         #sequence-canvas {
             width: 100%;
             height: 100%;
-            object-fit: cover;
             display: block;
         }
 
@@ -336,9 +333,9 @@
     </div>
 </div>
 
-<!-- Page wrapper with top padding for fixed 64px navbar -->
-<div id="page-wrapper" style="padding-top: 64px;">
-<!-- Hero Section -->
+<!-- Page wrapper — padding-top matches navbar height (64px) -->
+<div id="page-wrapper">
+<!-- Hero Section —already has pt-32/pt-48 which accounts for navbar -->
 <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 min-h-[921px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <img alt="Majestic historic university building with red brick and green domes" class="w-full h-full object-cover" src="/hero_bg.png"/>
@@ -449,15 +446,15 @@
 
     <!-- Scrollytelling Container -->
     <div class="h-[300vh] relative" id="scroll-sequence-container">
-        <!-- Sticky Wrapper -->
-        <div class="sticky top-0 h-screen flex flex-col items-center justify-center px-4" style="overflow: visible;">
-            <!-- Centered Card – uses aspect-ratio instead of fixed height -->
-            <div class="canvas-wrapper bg-surface-lowest border border-outline-variant/30 shadow-sm rounded-2xl relative flex items-center justify-center" style="overflow: visible;">
+        <!-- Sticky Wrapper: NO overflow:visible — breaks position:sticky -->
+        <div class="sticky top-0 h-screen flex flex-col items-center justify-center px-4">
+            <!-- Canvas card: aspect-ratio 16:9, overflow:hidden for rounded corners -->
+            <div class="canvas-wrapper bg-surface-lowest border border-outline-variant/30 shadow-sm rounded-2xl relative flex items-center justify-center">
                 <!-- Canvas for Image Sequence -->
                 <canvas id="sequence-canvas"></canvas>
                 
-                <!-- Badge (scroll chip) -->
-                <div class="scroll-chip flex items-center gap-2 text-tertiary font-label-lg bg-surface-lowest/80 backdrop-blur px-4 py-2 rounded-full border border-outline-variant/20 animate-pulse">
+                <!-- Scroll chip: absolutely positioned inside the wrapper -->
+                <div class="scroll-chip flex items-center gap-2 text-tertiary font-label-lg bg-surface-lowest/80 backdrop-blur px-4 py-2 rounded-full border border-outline-variant/20 animate-pulse" style="z-index:10;">
                     <span class="material-symbols-outlined text-sm">touch_app</span>
                     <span>Scroll to Reveal Process</span>
                 </div>
