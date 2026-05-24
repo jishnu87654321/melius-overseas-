@@ -100,19 +100,32 @@
         }
     </script>
 <style>
+        html, body { overflow-x: hidden; }
+        html { scroll-padding-top: 72px; }
+
+        #navbar-univ {
+            height: 64px !important;
+            background: rgba(255,255,255,0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            z-index: 1000;
+        }
+        #mobile-menu {
+            top: 0; right: 0; left: auto;
+            width: 100%; height: 100%;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+        }
+        #mobile-menu.is-open { transform: translateX(0); }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .material-symbols-outlined.fill {
             font-variation-settings: 'FILL' 1;
         }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
@@ -177,10 +190,10 @@
 
 
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-[#001848]/60 backdrop-blur-xl border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<nav class="fixed top-0 w-full border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar-univ">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 max-w-max-width mx-auto">
 <a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-2 lg:gap-3 lg:pl-6" href="/">
-<img src="/logo.png" alt="Melius Overseas Logo" class="h-10 object-contain" />
+<img src="/logo.png" alt="Melius Overseas Logo" class="h-9 object-contain" />
 <span>Melius Overseas</span>
 </a>
 <ul class="hidden md:flex space-x-8 items-center">
@@ -192,24 +205,24 @@
 <a href="/register" class="hidden md:inline-flex bg-on-tertiary-fixed text-on-tertiary font-label-lg text-label-lg px-6 py-3 rounded uppercase tracking-wider hover:bg-tertiary transition-colors">
                 Book Consultation
             </a>
-<button class="md:hidden text-on-background">
+<button class="md:hidden text-on-background p-2" id="mobile-menu-btn" aria-label="Toggle menu">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </nav>
 
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu" class="fixed inset-0 z-[45] bg-white/95 dark:bg-[#001848]/98 backdrop-blur-3xl transform translate-x-full transition-transform duration-300 flex flex-col pt-28 px-6 md:hidden">
+<!-- Mobile Menu Overlay (slides in from the right) -->
+<div id="mobile-menu" class="fixed z-[45] bg-white/95 dark:bg-[#001848]/98 backdrop-blur-3xl flex flex-col pt-28 px-6 md:hidden">
     <div class="flex flex-col gap-8 text-center">
-        <a class="font-headline-sm text-3xl font-bold text-on-background dark:text-white" href="/">Home</a>
-        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300" href="/roadmap">Roadmap</a>
-        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300" href="/universities">Universities</a>
-        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300" href="/stay">Stay</a>
-        <a href="/register" class="mt-8 bg-tertiary text-on-tertiary py-4 rounded-full font-bold text-xl shadow-lg shadow-tertiary/20">Book Consultation</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-background dark:text-white nav-link-close" href="/">Home</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/roadmap">Roadmap</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/universities">Universities</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/stay">Stay</a>
+        <a href="/register" class="mt-8 bg-tertiary text-on-tertiary py-4 rounded-full font-bold text-xl shadow-lg shadow-tertiary/20 nav-link-close">Book Consultation</a>
     </div>
 </div>
 
-<main class="pt-20">
+<main class="pt-20" style="padding-top: 64px;">
 <!-- Hero Section -->
 <section class="relative w-full h-[614px] min-h-[500px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -1196,17 +1209,23 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
-    if(btn && menu) {
+    if (btn && menu) {
         const icon = btn.querySelector('.material-symbols-outlined');
+        function openMenu() {
+            menu.classList.add('is-open');
+            if (icon) icon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            menu.classList.remove('is-open');
+            if (icon) icon.textContent = 'menu';
+            document.body.style.overflow = '';
+        }
         btn.addEventListener('click', () => {
-            menu.classList.toggle('translate-x-full');
-            if(menu.classList.contains('translate-x-full')) {
-                if(icon) icon.textContent = 'menu';
-                document.body.style.overflow = '';
-            } else {
-                if(icon) icon.textContent = 'close';
-                document.body.style.overflow = 'hidden';
-            }
+            menu.classList.contains('is-open') ? closeMenu() : openMenu();
+        });
+        menu.querySelectorAll('.nav-link-close').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
     }
 });
