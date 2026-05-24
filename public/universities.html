@@ -100,21 +100,22 @@
         }
     </script>
 <style>
-        html, body { overflow-x: hidden; }
+        html, body { overflow-x: clip; }
         html { scroll-padding-top: 72px; }
 
+        /* Desktop Navbar Default styles */
         #navbar-univ {
-            height: 64px !important;
-            background: rgba(255,255,255,0.95) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            height: 64px;
             z-index: 1000;
         }
+
+        /* Issue 1 & 3: Mobile drawer slides in from the RIGHT */
         #mobile-menu {
             top: 0; right: 0; left: auto;
             width: 100%; height: 100%;
             transform: translateX(100%);
             transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+            z-index: 1001 !important;
         }
         #mobile-menu.is-open { transform: translateX(0); }
 
@@ -126,9 +127,42 @@
         }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* ============================================================
+           MOBILE ONLY MEDIA QUERY (Strictly max-width: 767px)
+           ============================================================ */
+        @media (max-width: 767px) {
+            /* Issue 3: Navbar height 64px, frosted glass, z-index 1000 */
+            #navbar-univ {
+                position: fixed !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: 64px !important;
+                background: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(12px) !important;
+                -webkit-backdrop-filter: blur(12px) !important;
+                z-index: 1000 !important;
+            }
+
+            /* Issue 3: Main layout padding-top for fixed navbar */
+            main {
+                padding-top: 64px !important;
+            }
+            
+            .container {
+                padding-inline: 20px !important;
+            }
+
+            /* Issue 3: Logo responsiveness (contain, max-width 80vw, auto height) */
+            .logo-img {
+                object-fit: contain !important;
+                max-width: 80vw !important;
+                height: auto !important;
+            }
+        }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="bg-background text-on-background font-body-md antialiased">
 
 <!-- Smooth Page Loader -->
 <style>
@@ -173,7 +207,7 @@
   }
 </style>
 <div id="smooth-loader">
-  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo logo-img" />
   <div class="loading-bar-container">
     <div class="loading-bar"></div>
   </div>
@@ -193,7 +227,7 @@
 <nav class="fixed top-0 w-full border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar-univ">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 max-w-max-width mx-auto">
 <a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-2 lg:gap-3 lg:pl-6" href="/">
-<img src="/logo.png" alt="Melius Overseas Logo" class="h-9 object-contain" />
+<img src="/logo.png" alt="Melius Overseas Logo" class="h-9 object-contain logo-img" />
 <span>Melius Overseas</span>
 </a>
 <ul class="hidden md:flex space-x-8 items-center">
@@ -218,6 +252,7 @@
         <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/roadmap">Roadmap</a>
         <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/universities">Universities</a>
         <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/stay">Stay</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/contact">Contact</a>
         <a href="/register" class="mt-8 bg-tertiary text-on-tertiary py-4 rounded-full font-bold text-xl shadow-lg shadow-tertiary/20 nav-link-close">Book Consultation</a>
     </div>
 </div>

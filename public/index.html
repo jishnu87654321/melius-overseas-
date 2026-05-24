@@ -119,7 +119,7 @@
            GLOBAL MOBILE FIXES (Issues 1 & 3)
            ============================================================ */
         html, body {
-            overflow-x: hidden;
+            overflow-x: clip;
         }
         html {
             scroll-padding-top: 72px;
@@ -135,12 +135,9 @@
             }
         }
 
-        /* Issue 3: Navbar – fixed height 64px, frosted glass */
+        /* Desktop Navbar Default styles */
         #navbar {
-            height: 64px !important;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            height: 64px;
             z-index: 1000;
         }
 
@@ -153,63 +150,14 @@
             height: 100%;
             transform: translateX(100%);
             transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            z-index: 1001 !important;
         }
         #mobile-menu.is-open {
             transform: translateX(0);
         }
 
-        /* Issue 3: Stats – single column on mobile with dividers */
-        @media (max-width: 767px) {
-            .stats-grid {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 0 !important;
-            }
-            .stats-grid > div {
-                border-bottom: 0.5px solid #E5E5E5;
-                padding-bottom: 24px;
-                padding-top: 24px;
-            }
-            .stats-grid > div:last-child {
-                border-bottom: none;
-            }
-        }
-        /* Issue 3: Stat number typography */
-        .stat-number {
-            font-size: 52px !important;
-            font-weight: 800 !important;
-            color: #1A3C5E !important;
-        }
-        /* Issue 3: Stat label typography */
-        .stat-label {
-            font-size: 11px !important;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #888 !important;
-        }
-
-        /* Issue 3: Scroll chip centering */
-        .scroll-chip {
-            white-space: nowrap;
-            position: absolute;
-            bottom: 32px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Issue 3: Logo image never fixed height */
-        .logo-img {
-            object-fit: contain;
-            max-width: 80vw;
-            height: auto !important;
-        }
-
-        /* Issue 2: Canvas fills the sticky viewport cleanly */
-        #process-scroll {
-            /* No padding — sticky element handles full height */
-        }
+        /* Canvas fills the sticky viewport cleanly */
         .scroll-sticky-wrap {
-            /* Sticky element accounts for 64px fixed navbar */
             position: sticky;
             top: 64px;
             height: calc(100vh - 64px);
@@ -223,7 +171,6 @@
             width: 100%;
             max-width: 960px;
             aspect-ratio: 16 / 9;
-            /* On short viewports, cap height so it stays inside the sticky area */
             max-height: calc(100vh - 64px - 48px);
             position: relative;
             overflow: hidden;
@@ -237,7 +184,7 @@
             display: block;
         }
 
-        /* Legacy */
+        /* Legacy styles */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -250,6 +197,91 @@
         .hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
+        }
+
+        /* ============================================================
+           MOBILE ONLY MEDIA QUERY (Strictly max-width: 767px)
+           ============================================================ */
+        @media (max-width: 767px) {
+            /* Issue 3: Navbar height 64px, frosted glass, z-index 1000 */
+            #navbar {
+                position: fixed !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: 64px !important;
+                background: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(12px) !important;
+                -webkit-backdrop-filter: blur(12px) !important;
+                z-index: 1000 !important;
+            }
+
+            /* Issue 3: Page wrapper padding top matching navbar height */
+            #page-wrapper {
+                padding-top: 64px !important;
+            }
+
+            /* Issue 3: Stats section converted to single column with dividers */
+            .stats-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+            .stats-grid > div {
+                border-bottom: 0.5px solid #E5E5E5 !important;
+                padding-bottom: 24px !important;
+                padding-top: 24px !important;
+            }
+            .stats-grid > div:last-child {
+                border-bottom: none !important;
+            }
+
+            /* Issue 3: Stat numbers & labels typography */
+            .stat-number {
+                font-size: 52px !important;
+                font-weight: 800 !important;
+                color: #1A3C5E !important;
+            }
+            .stat-label {
+                font-size: 11px !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.1em !important;
+                color: #888 !important;
+            }
+
+            /* Issue 3: Scroll to Reveal Process Centered absolute chip */
+            .scroll-chip {
+                white-space: nowrap !important;
+                position: absolute !important;
+                bottom: 32px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+
+            /* Issue 3: Logo responsiveness (contain, max-width 80vw, auto height) */
+            .logo-img {
+                object-fit: contain !important;
+                max-width: 80vw !important;
+                height: auto !important;
+            }
+
+            /* Issue 2: Canvas scroll animation section and wrapper adjustments */
+            #process-scroll {
+                min-height: 100svh !important;
+                height: auto !important;
+            }
+            .scroll-sticky-wrap {
+                height: calc(100svh - 64px) !important;
+            }
+            .canvas-wrapper {
+                aspect-ratio: 16 / 9 !important;
+                overflow: visible !important;
+                height: auto !important;
+                max-height: none !important;
+            }
+            #sequence-canvas {
+                object-fit: cover !important;
+                height: auto !important;
+            }
         }
     </style>
 </head>
@@ -298,7 +330,7 @@
   }
 </style>
 <div id="smooth-loader">
-  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo logo-img" />
   <div class="loading-bar-container">
     <div class="loading-bar"></div>
   </div>
@@ -318,7 +350,7 @@
 <nav class="fixed top-0 w-full border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 max-w-max-width mx-auto">
 <a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-2 lg:gap-3 lg:pl-6" href="/">
-<img src="/logo.png" alt="Melius Overseas" class="h-9 object-contain" />
+<img src="/logo.png" alt="Melius Overseas" class="h-9 object-contain logo-img" />
 <span>Melius Overseas</span>
 </a>
 <div class="hidden md:flex items-center gap-8">
@@ -344,6 +376,7 @@
         <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/roadmap">Roadmap</a>
         <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/universities">Universities</a>
         <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/stay">Stay</a>
+        <a class="font-headline-sm text-3xl font-bold text-on-surface-variant dark:text-gray-300 nav-link-close" href="/contact">Contact</a>
         <a href="/register" class="mt-8 bg-tertiary text-on-tertiary py-4 rounded-full font-bold text-xl shadow-lg shadow-tertiary/20 nav-link-close">Book Consultation</a>
     </div>
 </div>
@@ -920,7 +953,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- Brand Column -->
 <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
 <a class="font-headline-md text-headline-md text-surface-lowest flex items-center gap-2" href="#">
-<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain brightness-0 invert" />
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain brightness-0 invert logo-img" />
                 </a>
 <p class="font-body-md text-sm text-surface-variant/70">
                     Elite Stewardship in Global Education. Bridging ambition with world-class medical institutions across Europe.

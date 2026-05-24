@@ -51,6 +51,10 @@ app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
 // API endpoint for registration
 app.post('/api/register', async (req, res) => {
     try {
