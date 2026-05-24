@@ -204,17 +204,32 @@
             height: auto !important;
         }
 
-        /* Issue 2: Scroll section — no min-height override, py-24 is enough */
-        /* #process-scroll intentionally NOT given min-height to avoid blank gap */
-
-        /* Issue 2: Canvas wrapper — aspect-ratio 16:9, capped to 80vh so it fits viewport */
+        /* Issue 2: Canvas fills the sticky viewport cleanly */
+        #process-scroll {
+            /* No padding — sticky element handles full height */
+        }
+        .scroll-sticky-wrap {
+            /* Sticky element accounts for 64px fixed navbar */
+            position: sticky;
+            top: 64px;
+            height: calc(100vh - 64px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
         .canvas-wrapper {
-            aspect-ratio: 16 / 9;
             width: 100%;
-            max-width: 1000px;
-            max-height: 80vh;  /* prevent overflow on short screens */
+            max-width: 960px;
+            aspect-ratio: 16 / 9;
+            /* On short viewports, cap height so it stays inside the sticky area */
+            max-height: calc(100vh - 64px - 48px);
             position: relative;
-            overflow: hidden;  /* required for border-radius to clip canvas */
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            background: #0a0a0a;
         }
         #sequence-canvas {
             width: 100%;
@@ -435,32 +450,32 @@
 <!-- Bottom shadow for depth -->
 <div class="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-black/5 to-transparent z-10"></div>
 </section>
-<!-- Admission Letter Scroll Sequence Animation Container -->
-<section id="process-scroll" class="py-24 bg-surface-lowest">
-    <!-- Header Layout -->
-    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16 relative z-10">
+<!-- Admission Letter Scroll Sequence -->
+<section id="process-scroll" class="bg-surface-lowest">
+
+    <!-- Section header: sits ABOVE the scrollytelling, normal flow -->
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center pt-24 pb-16 relative z-10">
         <span class="text-tertiary font-label-lg text-label-lg uppercase tracking-widest mb-4 block">The Destination</span>
         <h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">From Application to Acceptance</h2>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Experience the thrill of receiving your official admission letter. From application straight through to your offer letter, we keep you informed at every step so you can focus on your move, not paperwork.</p>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Experience the thrill of receiving your official admission letter. We keep you informed at every step so you can focus on your move, not paperwork.</p>
     </div>
 
-    <!-- Scrollytelling Container -->
+    <!-- Scrollytelling container: exactly 300vh so the sticky canvas plays all frames -->
     <div class="h-[300vh] relative" id="scroll-sequence-container">
-        <!-- Sticky Wrapper: NO overflow:visible — breaks position:sticky -->
-        <div class="sticky top-0 h-screen flex flex-col items-center justify-center px-4">
-            <!-- Canvas card: aspect-ratio 16:9, overflow:hidden for rounded corners -->
-            <div class="canvas-wrapper bg-surface-lowest border border-outline-variant/30 shadow-sm rounded-2xl relative flex items-center justify-center">
-                <!-- Canvas for Image Sequence -->
+        <div class="scroll-sticky-wrap">
+            <div class="canvas-wrapper">
                 <canvas id="sequence-canvas"></canvas>
-                
-                <!-- Scroll chip: absolutely positioned inside the wrapper -->
-                <div class="scroll-chip flex items-center gap-2 text-tertiary font-label-lg bg-surface-lowest/80 backdrop-blur px-4 py-2 rounded-full border border-outline-variant/20 animate-pulse" style="z-index:10;">
+                <div class="scroll-chip flex items-center gap-2 text-white font-label-lg bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 animate-pulse" style="z-index:10;">
                     <span class="material-symbols-outlined text-sm">touch_app</span>
                     <span>Scroll to Reveal Process</span>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Bottom spacing -->
+    <div class="pb-24"></div>
+
 </section>
 
 <script>
