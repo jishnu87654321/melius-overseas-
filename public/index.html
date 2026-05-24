@@ -257,13 +257,6 @@
                 transform: translateX(-50%) !important;
             }
 
-            /* Issue 3: Logo responsiveness (contain, max-width 80vw, auto height) */
-            .logo-img {
-                object-fit: contain !important;
-                max-width: 80vw !important;
-                height: auto !important;
-            }
-
             /* Issue 2: Canvas scroll animation section and wrapper adjustments */
             #process-scroll {
                 min-height: 100svh !important;
@@ -330,7 +323,7 @@
   }
 </style>
 <div id="smooth-loader">
-  <img src="/logo.png" alt="Melius Overseas" class="loader-logo logo-img" />
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
   <div class="loading-bar-container">
     <div class="loading-bar"></div>
   </div>
@@ -350,7 +343,7 @@
 <nav class="fixed top-0 w-full border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 max-w-max-width mx-auto">
 <a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-2 lg:gap-3 lg:pl-6" href="/">
-<img src="/logo.png" alt="Melius Overseas" class="h-9 object-contain logo-img" />
+<img src="/logo.png" alt="Melius Overseas" class="h-9 object-contain" />
 <span>Melius Overseas</span>
 </a>
 <div class="hidden md:flex items-center gap-8">
@@ -953,7 +946,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- Brand Column -->
 <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
 <a class="font-headline-md text-headline-md text-surface-lowest flex items-center gap-2" href="#">
-<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain brightness-0 invert logo-img" />
+<img src="/logo.png" alt="Melius Overseas" class="h-10 object-contain brightness-0 invert" />
                 </a>
 <p class="font-body-md text-sm text-surface-variant/70">
                     Elite Stewardship in Global Education. Bridging ambition with world-class medical institutions across Europe.

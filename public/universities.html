@@ -153,13 +153,7 @@
                 padding-inline: 20px !important;
             }
 
-            /* Issue 3: Logo responsiveness (contain, max-width 80vw, auto height) */
-            .logo-img {
-                object-fit: contain !important;
-                max-width: 80vw !important;
-                height: auto !important;
             }
-        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased">
@@ -207,7 +201,7 @@
   }
 </style>
 <div id="smooth-loader">
-  <img src="/logo.png" alt="Melius Overseas" class="loader-logo logo-img" />
+  <img src="/logo.png" alt="Melius Overseas" class="loader-logo" />
   <div class="loading-bar-container">
     <div class="loading-bar"></div>
   </div>
@@ -227,7 +221,7 @@
 <nav class="fixed top-0 w-full border-b border-white/40 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300" id="navbar-univ">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 max-w-max-width mx-auto">
 <a class="font-headline-sm text-headline-sm font-bold text-on-background dark:text-surface-bright flex items-center gap-2 lg:gap-3 lg:pl-6" href="/">
-<img src="/logo.png" alt="Melius Overseas Logo" class="h-9 object-contain logo-img" />
+<img src="/logo.png" alt="Melius Overseas Logo" class="h-9 object-contain" />
 <span>Melius Overseas</span>
 </a>
 <ul class="hidden md:flex space-x-8 items-center">
