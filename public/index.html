@@ -156,34 +156,6 @@
             transform: translateX(0);
         }
 
-        /* Canvas fills the sticky viewport cleanly */
-        .scroll-sticky-wrap {
-            position: sticky;
-            top: 64px;
-            height: calc(100vh - 64px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-        }
-        .canvas-wrapper {
-            width: 100%;
-            max-width: 960px;
-            aspect-ratio: 16 / 9;
-            max-height: calc(100vh - 64px - 48px);
-            position: relative;
-            overflow: hidden;
-            border-radius: 1rem;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            background: #0a0a0a;
-        }
-        #sequence-canvas {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
         /* Legacy styles */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
@@ -246,34 +218,6 @@
                 text-transform: uppercase !important;
                 letter-spacing: 0.1em !important;
                 color: #888 !important;
-            }
-
-            /* Issue 3: Scroll to Reveal Process Centered absolute chip */
-            .scroll-chip {
-                white-space: nowrap !important;
-                position: absolute !important;
-                bottom: 32px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
-            }
-
-            /* Issue 2: Canvas scroll animation section and wrapper adjustments */
-            #process-scroll {
-                min-height: 100svh !important;
-                height: auto !important;
-            }
-            .scroll-sticky-wrap {
-                height: calc(100svh - 64px) !important;
-            }
-            .canvas-wrapper {
-                aspect-ratio: 16 / 9 !important;
-                overflow: visible !important;
-                height: auto !important;
-                max-height: none !important;
-            }
-            #sequence-canvas {
-                object-fit: cover !important;
-                height: auto !important;
             }
         }
     </style>
@@ -485,99 +429,18 @@
         <h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">From Application to Acceptance</h2>
         <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Experience the thrill of receiving your official admission letter. We keep you informed at every step so you can focus on your move, not paperwork.</p>
     </div>
-
-    <!-- Scrollytelling container: exactly 300vh so the sticky canvas plays all frames -->
-    <div class="h-[300vh] relative" id="scroll-sequence-container">
-        <div class="scroll-sticky-wrap">
-            <div class="canvas-wrapper">
-                <canvas id="sequence-canvas"></canvas>
-                <div class="scroll-chip flex items-center gap-2 text-white font-label-lg bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 animate-pulse" style="z-index:10;">
-                    <span class="material-symbols-outlined text-sm">touch_app</span>
-                    <span>Scroll to Reveal Process</span>
-                </div>
-            </div>
+    <!-- Video Showcase Container -->
+    <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop pb-24 flex justify-center">
+        <div class="relative w-full max-w-[360px] aspect-[478/850] rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-outline-variant/30 bg-[#0a0a0a]">
+            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/admission_letter.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 
-    <!-- Bottom spacing -->
-    <div class="pb-24"></div>
-
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.getElementById('sequence-canvas');
-    if(!canvas) return;
-    const ctx = canvas.getContext('2d');
-    
-    // Using a 16:9 internal resolution as typical for standard video frames
-    canvas.width = 1920;
-    canvas.height = 1080;
-
-    const frameCount = 300;
-    const currentFrame = index => `/frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
-
-    const images = [];
-    
-    // Preload all 300 frames
-    for (let i = 1; i <= frameCount; i++) {
-        const img = new Image();
-        img.src = currentFrame(i);
-        images.push(img);
-    }
-
-    // Function to draw an image centered and scaled
-    const drawImage = (img) => {
-        if (!img || !img.naturalWidth) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        // Scale to "cover" the canvas area and zoom in to crop baked-in white borders
-        const CROP_SCALE = 1.4;
-        const scale = Math.max(canvas.width / img.naturalWidth, canvas.height / img.naturalHeight) * CROP_SCALE;
-        const drawWidth = img.naturalWidth * scale;
-        const drawHeight = img.naturalHeight * scale;
-        
-        const x = (canvas.width - drawWidth) / 2;
-        const y = (canvas.height - drawHeight) / 2;
-        
-        ctx.drawImage(img, x, y, drawWidth, drawHeight);
-    };
-
-    // Draw first frame when it's fully loaded to prevent blank screen
-    images[0].onload = () => {
-        canvas.width = images[0].naturalWidth || 1920;
-        canvas.height = images[0].naturalHeight || 1080;
-        drawImage(images[0]);
-    };
-
-    const container = document.getElementById('scroll-sequence-container');
-
-    window.addEventListener('scroll', () => {
-        const rect = container.getBoundingClientRect();
-        
-        // Calculate progress based on container top relative to viewport
-        // Progress starts when container top hits viewport top (rect.top = 0)
-        // Progress ends when container bottom hits viewport bottom (rect.bottom = window.innerHeight)
-        const scrollRange = rect.height - window.innerHeight;
-        let progress = -rect.top / scrollRange;
-        
-        if (progress < 0) progress = 0;
-        if (progress > 1) progress = 1;
-
-        // Calculate frame index (0-based array index, so 0 to 299)
-        const frameIndex = Math.min(
-            frameCount - 1,
-            Math.floor(progress * frameCount)
-        );
-
-        requestAnimationFrame(() => {
-            if (images[frameIndex] && images[frameIndex].complete) {
-                drawImage(images[frameIndex]);
-            }
-        });
-    });
-});
-</script>
 <!-- About Melius Section -->
 <section class="py-24 bg-surface-container-lowest">
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
