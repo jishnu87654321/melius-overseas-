@@ -62,7 +62,7 @@
     /* Desktop Navbar Default styles */
     #navbar {
         height: 64px;
-        z-index: 1000;
+        z-index: 1050;
     }
 
     /* Issue 1 & 3: Mobile drawer slides in from the RIGHT */
@@ -71,7 +71,7 @@
         width: 100%; height: 100%;
         transform: translateX(100%);
         transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-        z-index: 1001 !important;
+        z-index: 1040 !important;
     }
     #mobile-menu.is-open { transform: translateX(0); }
 
@@ -109,7 +109,7 @@
        MOBILE ONLY MEDIA QUERY (Strictly max-width: 767px)
        ============================================================ */
     @media (max-width: 767px) {
-        /* Issue 3: Navbar height 64px, frosted glass, z-index 1000 */
+        /* Issue 3: Navbar height 64px, frosted glass, z-index 1050 */
         #navbar {
             position: fixed !important;
             top: 0 !important;
@@ -118,7 +118,7 @@
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(12px) !important;
             -webkit-backdrop-filter: blur(12px) !important;
-            z-index: 1000 !important;
+            z-index: 1050 !important;
         }
 
         /* Issue 3: Main layout padding-top for fixed navbar */
@@ -235,7 +235,7 @@
 <section class="bg-on-secondary-fixed pt-32 pb-24 px-5 md:px-20 relative overflow-hidden text-center md:text-left flex flex-col items-center">
     <div class="max-w-4xl mx-auto relative z-10 text-center">
         <span class="inline-block px-4 py-1.5 rounded-full border border-tertiary text-tertiary font-label-lg text-xs tracking-widest uppercase mb-6 bg-tertiary/10">Timeline</span>
-        <h1 class="font-display-lg text-5xl md:text-6xl font-bold text-white mb-6">
+        <h1 class="font-display-lg text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6">
             Your Admission <span class="text-tertiary">Roadmap</span>
         </h1>
         <p class="font-body-lg text-surface-variant/80 max-w-2xl mx-auto">

@@ -138,7 +138,7 @@
         /* Desktop Navbar Default styles */
         #navbar {
             height: 64px;
-            z-index: 1000;
+            z-index: 1050;
         }
 
         /* Issue 1 & 3: Mobile drawer slides in from the RIGHT */
@@ -150,7 +150,7 @@
             height: 100%;
             transform: translateX(100%);
             transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-            z-index: 1001 !important;
+            z-index: 1040 !important;
         }
         #mobile-menu.is-open {
             transform: translateX(0);
@@ -175,7 +175,7 @@
            MOBILE ONLY MEDIA QUERY (Strictly max-width: 767px)
            ============================================================ */
         @media (max-width: 767px) {
-            /* Issue 3: Navbar height 64px, frosted glass, z-index 1000 */
+            /* Issue 3: Navbar height 64px, frosted glass, z-index 1050 */
             #navbar {
                 position: fixed !important;
                 top: 0 !important;
@@ -184,7 +184,7 @@
                 background: rgba(255, 255, 255, 0.95) !important;
                 backdrop-filter: blur(12px) !important;
                 -webkit-backdrop-filter: blur(12px) !important;
-                z-index: 1000 !important;
+                z-index: 1050 !important;
             }
 
             /* Issue 3: Page wrapper padding top matching navbar height */
@@ -321,14 +321,14 @@
 <!-- Page wrapper — padding-top matches navbar height (64px) -->
 <div id="page-wrapper">
 <!-- Hero Section —already has pt-32/pt-48 which accounts for navbar -->
-<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 min-h-[921px] flex items-center overflow-hidden">
+<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 min-h-[80vh] md:min-h-[921px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <img alt="Majestic historic university building with red brick and green domes" class="w-full h-full object-cover" src="/hero_bg.png"/>
 <div class="absolute inset-0 bg-gradient-to-r from-on-background/90 via-on-background/70 to-transparent"></div>
 </div>
 <div class="relative z-10 w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <div class="lg:col-span-8 flex flex-col gap-6">
-<h1 class="font-display-lg text-5xl md:text-7xl lg:text-[80px] text-surface-lowest leading-tight">
+<h1 class="font-display-lg text-4xl sm:text-5xl md:text-7xl lg:text-[80px] text-surface-lowest leading-tight">
                     Your Medical Future <br/><span class="text-tertiary-fixed-dim italic">Starts Here</span>
 </h1>
 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mt-4">
@@ -448,7 +448,7 @@
 <!-- Image Side -->
 <div class="lg:col-span-5 relative group">
 <div class="absolute inset-0 bg-tertiary-fixed rounded-2xl -rotate-3 transition-transform group-hover:rotate-0 duration-500 origin-bottom-left"></div>
-<img alt="Editorial portrait of a confident, diverse group of medical students in white coats, smiling and studying together in a modern, bright university library. The lighting is crisp and natural, highlighting their professionalism and ambition. Minimalist luxury aesthetic with clean lines and soft shadows." class="relative z-10 rounded-2xl shadow-xl w-full h-[600px] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Editorial portrait of a confident, diverse group of medical students in white coats, smiling and studying together in a modern, bright university library. The lighting is crisp and natural, highlighting their professionalism and ambition. Minimalist luxury aesthetic with clean lines and soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb17Tl5jFfsBvC9ziw-X2o2rxQFkOMfC8m5TKr-i7vnvWshbvuUfUvBt_pI4gqzblkMA_J5cn2KHAXNJf82ammU2bOGDuRne5iHNn5wUgfLGaOerGTdja8LSBHVAPVIXs3HwYHHJNeXOnkMkbJ7uJX_xSbCgwbwfJ7oJg9eD4u5A3M3u-cXE6dci5ON1mCd6whp-JA2FDh-tf2I0KkYXjp_5jTUxFp4JCQCcD82xsaFe8kZajBO6dHeS9LrDNtKoW4Qrsd7tD_bpYi"/>
+<img alt="Editorial portrait of a confident, diverse group of medical students in white coats, smiling and studying together in a modern, bright university library. The lighting is crisp and natural, highlighting their professionalism and ambition. Minimalist luxury aesthetic with clean lines and soft shadows." class="relative z-10 rounded-2xl shadow-xl w-full h-[320px] md:h-[600px] object-cover object-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Editorial portrait of a confident, diverse group of medical students in white coats, smiling and studying together in a modern, bright university library. The lighting is crisp and natural, highlighting their professionalism and ambition. Minimalist luxury aesthetic with clean lines and soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb17Tl5jFfsBvC9ziw-X2o2rxQFkOMfC8m5TKr-i7vnvWshbvuUfUvBt_pI4gqzblkMA_J5cn2KHAXNJf82ammU2bOGDuRne5iHNn5wUgfLGaOerGTdja8LSBHVAPVIXs3HwYHHJNeXOnkMkbJ7uJX_xSbCgwbwfJ7oJg9eD4u5A3M3u-cXE6dci5ON1mCd6whp-JA2FDh-tf2I0KkYXjp_5jTUxFp4JCQCcD82xsaFe8kZajBO6dHeS9LrDNtKoW4Qrsd7tD_bpYi"/>
 </div>
 <!-- Text Side -->
 <div class="lg:col-span-7 flex flex-col gap-8">

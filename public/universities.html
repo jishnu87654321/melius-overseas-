@@ -106,7 +106,7 @@
         /* Desktop Navbar Default styles */
         #navbar-univ {
             height: 64px;
-            z-index: 1000;
+            z-index: 1050;
         }
 
         /* Issue 1 & 3: Mobile drawer slides in from the RIGHT */
@@ -115,7 +115,7 @@
             width: 100%; height: 100%;
             transform: translateX(100%);
             transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-            z-index: 1001 !important;
+            z-index: 1040 !important;
         }
         #mobile-menu.is-open { transform: translateX(0); }
 
@@ -132,7 +132,7 @@
            MOBILE ONLY MEDIA QUERY (Strictly max-width: 767px)
            ============================================================ */
         @media (max-width: 767px) {
-            /* Issue 3: Navbar height 64px, frosted glass, z-index 1000 */
+            /* Issue 3: Navbar height 64px, frosted glass, z-index 1050 */
             #navbar-univ {
                 position: fixed !important;
                 top: 0 !important;
@@ -141,7 +141,7 @@
                 background: rgba(255, 255, 255, 0.95) !important;
                 backdrop-filter: blur(12px) !important;
                 -webkit-backdrop-filter: blur(12px) !important;
-                z-index: 1000 !important;
+                z-index: 1050 !important;
             }
 
             /* Issue 3: Main layout padding-top for fixed navbar */
@@ -253,27 +253,16 @@
 
 <main class="pt-20" style="padding-top: 64px;">
 <!-- Hero Section -->
-<section class="relative w-full h-auto min-h-[614px] py-16 flex items-center justify-center overflow-hidden">
+<section class="relative w-full h-[50vh] md:h-[614px] min-h-[350px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Medical University Campus Background" class="w-full h-full object-cover object-center filter brightness-[0.6]" src="/universities_bg.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent"></div>
+<img alt="Cinematic shot of a grand university campus building with classic architecture, lush green lawns, and students walking. The lighting is golden hour, casting long soft shadows and a warm, aspirational glow. High-end editorial photography style." class="w-full h-full object-cover object-center filter brightness-75" data-alt="A grand, historic university campus building made of pale stone with classical architecture, surrounded by manicured green lawns and large oak trees. The scene is bathed in warm, golden-hour sunlight, creating a highly aspirational, premium academic atmosphere. Small silhouettes of students walking add scale. High-end, luxury editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3uISbdDP0__ferL1WA_8wSGsFoAFc810jBiwTTEmSSLjrZiuoz9FpzgB-l9tsTup7rNhy1nBxr3whsPytj58ytjCmMjeq4f38B86POZKBAFwBg-MSU78uGydULMnSIiOOYpAFcjQuVg8B4pc3AFdslRVn1m-TwzHVJ2tuk7LiAo3zIqA48bhWiEoN29VJpEd3Ww6k9lHksuiIDH7srHW8zfftc0LeyoBJmQVUlEZgb5t47-9VPSWM4b61T5T4DCXAzQeBE08Gm6sA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
 </div>
-<div class="relative z-10 w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-16">
-    <!-- Text Column -->
-    <div class="lg:col-span-7 text-center lg:text-left flex flex-col gap-6 items-center lg:items-start">
-        <h1 class="font-display-lg text-4xl md:text-5xl lg:text-6xl text-white drop-shadow-lg leading-tight">
-            World-Class Universities.<br/><span class="text-secondary-fixed">Carefully Selected.</span>
-        </h1>
-        <p class="font-body-lg text-body-lg text-surface-container-high max-w-2xl drop-shadow-md">
-            Explore our curated portfolio of premier global institutions. Each university is vetted for academic excellence, modern infrastructure, and international student support.
-        </p>
-    </div>
-    <!-- Badge Column -->
-    <div class="lg:col-span-5 flex justify-center lg:justify-end w-full">
-        <div class="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px] hover:scale-105 transition-transform duration-300">
-            <img src="/who_nmc_badge.png" alt="WHO & NMC Approved Universities" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
-        </div>
-    </div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto mt-20">
+<h1 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-display-lg text-on-primary drop-shadow-lg mb-6">World-Class Universities.<br/><span class="text-secondary-fixed">Carefully Selected.</span></h1>
+<p class="font-body-lg text-body-lg text-surface-container-high max-w-2xl mx-auto drop-shadow-md">
+                    Explore our curated portfolio of premier global institutions. Each university is vetted for academic excellence, modern infrastructure, and international student support.
+                </p>
 </div>
 </section>
 <!-- Filter Bar -->
@@ -305,7 +294,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Georgian National University SEU</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Georgian National University SEU</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -327,7 +316,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Alte University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Alte University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -349,7 +338,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Caucasus University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Caucasus University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -371,7 +360,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Caucasus International University (CIU)</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Caucasus International University (CIU)</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -393,7 +382,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Black Sea University (IBSU)</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Black Sea University (IBSU)</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -415,7 +404,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Peking University Health Science Center</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Peking University Health Science Center</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -437,7 +426,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Shanghai Jiao Tong University School of Medicine</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Shanghai Jiao Tong University School of Medicine</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -459,7 +448,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tsinghua University School of Medicine</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tsinghua University School of Medicine</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -481,7 +470,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">First Moscow State Medical University (Sechenov University)</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">First Moscow State Medical University (Sechenov University)</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -503,7 +492,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Saint Petersburg State Medical University (Pavlov University)</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Saint Petersburg State Medical University (Pavlov University)</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -525,7 +514,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Pirogov Russian National Research Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Pirogov Russian National Research Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -547,7 +536,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">University of Santo Tomas Faculty of Medicine and Surgery</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">University of Santo Tomas Faculty of Medicine and Surgery</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -569,7 +558,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">University of the Philippines Manila</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">University of the Philippines Manila</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -591,7 +580,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tashkent State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tashkent State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -613,7 +602,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Samarkand State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Samarkand State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -635,7 +624,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Andijan State Medical Institute</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Andijan State Medical Institute</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -657,7 +646,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Bukhara State Medical Institute</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Bukhara State Medical Institute</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -679,7 +668,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Urgench Branch of Tashkent Medical Academy</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Urgench Branch of Tashkent Medical Academy</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -701,7 +690,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tashkent Pediatric Medical Institute</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tashkent Pediatric Medical Institute</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -723,7 +712,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Mari State University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Mari State University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -745,7 +734,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Orel State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Orel State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -767,7 +756,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Orenburg State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Orenburg State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -789,7 +778,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Perm State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Perm State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -811,7 +800,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tver State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Tver State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -833,7 +822,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Altai State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Altai State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -855,7 +844,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Bangladesh Medical College</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Bangladesh Medical College</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -877,7 +866,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Dhaka National Medical College</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Dhaka National Medical College</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -899,7 +888,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Holy Family Red Crescent Medical College</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Holy Family Red Crescent Medical College</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -921,7 +910,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Medical College</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Medical College</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -943,7 +932,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Delta Medical College</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Delta Medical College</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -965,7 +954,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Jahurul Islam Medical College</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Jahurul Islam Medical College</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -987,7 +976,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Asian Medical Institute</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Asian Medical Institute</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1009,7 +998,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Kyrgyz-Russian Slavic University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Kyrgyz-Russian Slavic University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1031,7 +1020,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Jalalabad State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Jalalabad State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1053,7 +1042,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">International Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1075,7 +1064,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Osh State University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Osh State University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1097,7 +1086,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Kyrgyz State Medical Academy</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Kyrgyz State Medical Academy</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1119,7 +1108,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Yerevan State Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Yerevan State Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1141,7 +1130,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Yerevan Haybusak Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Yerevan Haybusak Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1163,7 +1152,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Mkhitar Gosh Armenian-Russian International University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Mkhitar Gosh Armenian-Russian International University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
@@ -1185,7 +1174,7 @@
     </div>
 
     <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end">
-        <h3 class="font-display-lg text-4xl md:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Hanoi Medical University</h3>
+        <h3 class="font-display-lg text-xl sm:text-2xl md:text-4xl lg:text-5xl text-surface-lowest font-medium mb-4 group-hover:text-[#facc15] transition-colors">Hanoi Medical University</h3>
 
         <div class="flex flex-wrap items-center gap-6 border-t border-surface-variant/20 pt-6">
             <a href="/register" class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-tertiary hover:text-[#facc15] transition-colors">
